@@ -1,5 +1,4 @@
 import React from 'react';
-import './social-icon.css';
 import {
   TiSocialTwitter, TiSocialFacebook, TiSocialGooglePlus, TiSocialVimeo, TiSocialPinterest,
 } from 'react-icons/ti';

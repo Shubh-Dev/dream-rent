@@ -6,9 +6,7 @@ import ReserveList from './components/ReserveList';
 import MyReservations from './components/MyReservations';
 import Sidebar from './components/Sidebar';
 import DeleteHouse from './components/DeleteHouse';
-import Hamburger from './components/Hamburger';
 import './App.css';
-// import House from './webpages/house';
 import Details from './webpages/details';
 import Login from './components/Login';
 import { isLogged } from './api/config';
@@ -25,7 +23,6 @@ function App() {
   return (
     <div className="App">
       <div className="sidebar-container">
-        <Hamburger />
         <Sidebar />
       </div>
       <div className="main-container">
