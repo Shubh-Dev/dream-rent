@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import AddHouse from './components/AddHouse';
-// import HouseList from './components/HouseList';
+import HouseList from './components/HouseList';
 import ReserveList from './components/ReserveList';
 import MyReservations from './components/MyReservations';
 import Sidebar from './components/Sidebar';
 import DeleteHouse from './components/DeleteHouse';
 import Hamburger from './components/Hamburger';
 import './App.css';
-import House from './webpages/house';
+// import House from './webpages/house';
 import Details from './webpages/details';
 import Login from './components/Login';
 import { isLogged } from './api/config';
@@ -30,7 +30,7 @@ function App() {
       </div>
       <div className="main-container">
         <Routes>
-          <Route path="/" element={<House />} />
+          <Route path="/" element={<HouseList />} />
           <Route path="/houses/:id" element={<Details />} />
           <Route path="/add-house" element={<AddHouse />} />
           <Route path="/reserve-list" element={<ReserveList />} />
