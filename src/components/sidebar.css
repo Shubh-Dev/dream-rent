@@ -25,9 +25,9 @@
   margin-top: 30vh;
 }
 
- .hamburger-container {
+.hamburger-container {
   display: none;
-} 
+}
 
 @media (max-width: 768px) {
   .nav-links-container {
@@ -45,5 +45,4 @@
   .show {
     display: block;
   }
-
 }
