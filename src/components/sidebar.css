@@ -1,0 +1,32 @@
+.nav-bar-container {
+  border: 1px red dashed;
+  display: block;
+  width: 20%;
+  height: 99vh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-links-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.logo-container {
+  margin-bottom: 10vh;
+}
+
+.social-logos {
+  margin-top: 30vh;
+}
+
+@media (max-width: 768px) {
+  .nav-bar-container {
+    display: none;
+  }
+}
