@@ -8,14 +8,11 @@ import Sidebar from './components/Sidebar';
 import DeleteHouse from './components/DeleteHouse';
 import Hamburger from './components/Hamburger';
 import './App.css';
-<<<<<<< HEAD
 import House from './webpages/house';
 import Details from './webpages/details';
-=======
 import Login from './components/Login';
 import { isLogged } from './api/config';
 import Logout from './components/Logout';
->>>>>>> 3c8bf101993aaa26be34fd7d4ee4e068f91f50e4
 
 function App() {
   const location = useLocation();
