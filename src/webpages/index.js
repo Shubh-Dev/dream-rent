@@ -3,7 +3,7 @@ import { Routes } from 'react-router-dom';
 
 function WebPages() {
   return (
-    <Routes/>
+    <Routes />
   );
 }
 
