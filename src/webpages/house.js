@@ -32,10 +32,10 @@ const House = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="card-group p-5 m-5">
+    <div className="card-group m-5">
       { houses.map((house) => (
-        <div className="card m-2" key={house.id}>
-          <img src={house.image} className="card-img-top" alt="..." />
+        <div className="card" key={house.id}>
+          <img src={house.image_path} className="card-img-top" alt="..." style={{ width: '200px', height: '200px' }} />
           <div className="card-body">
             <Link to={`house/${house.id}`}>
               <h5 className="card-title">
@@ -49,8 +49,8 @@ const House = () => {
             </p>
             <p className="card-text">
               <small className="text-muted">
-                Balcony? :
-                {house.balcony}
+                Rooms :
+                {house.rooms}
               </small>
             </p>
             <p className="card-text">
