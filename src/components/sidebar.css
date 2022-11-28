@@ -15,34 +15,41 @@
   display: flex;
   flex-direction: column;
   gap: 5vh;
+  border: 1px blue dashed;
 }
 
 .logo-container {
   margin-bottom: 10vh;
+  border: 1px red dashed;
 }
 
 .social-logos {
   margin-top: 30vh;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 .hamburger-container {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .nav-links-container {
-    display: none;
-  }
-
-  .logo-container {
-    display: none;
-  }
-
+@media screen and (max-width: 768px) {
   .hamburger-container {
     display: block;
   }
 
   .show {
-    display: block;
+    display: none;
   }
+
+  .show {
+    display: none;
+  }
+
 }
