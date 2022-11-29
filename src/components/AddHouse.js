@@ -1,7 +1,4 @@
 import { React, useState } from 'react';
-// import bookHouse from '../services/services';
-
-//  add a new house form
 
 const AddHouse = () => {
   const URL = 'http://localhost:3000/api/v1/houses';
@@ -20,18 +17,15 @@ const AddHouse = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(URL, {
-
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(house),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
-
+      .then((res) => res.json());
+    // .then((data) => {
+    // });
     // bookHouse.addHouse(house);
     setHouse({
       address: '',
