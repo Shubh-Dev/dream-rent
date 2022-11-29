@@ -14,6 +14,8 @@ const AddHouse = () => {
     setHouse({ ...house, [e.target.name]: e.target.value });
   };
 
+  const redirectAfterSubmit = () => window.location.replace('/');
+
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(URL, {
@@ -24,9 +26,7 @@ const AddHouse = () => {
       body: JSON.stringify(house),
     })
       .then((res) => res.json());
-    // .then((data) => {
-    // });
-    // bookHouse.addHouse(house);
+
     setHouse({
       address: '',
       house_type: '',
@@ -34,6 +34,7 @@ const AddHouse = () => {
       balcony: '',
       size: '',
     });
+    redirectAfterSubmit();
   };
 
   return (
@@ -74,7 +75,7 @@ const AddHouse = () => {
           value={house.size}
           onChange={handleChange}
         />
-        <button type="submit">Add House</button>
+        <button type="submit" onSubmit={redirectAfterSubmit}>Submit</button>
       </form>
     </div>
   );

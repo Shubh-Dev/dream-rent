@@ -2,11 +2,7 @@ import { React, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-// fetch houselist from api and display with a delete button,
-// when delete button is clicked, delete the house from the api
-
 const DeleteHouse = () => {
-  // const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [houses, setHouses] = useState([]);
 
@@ -16,22 +12,12 @@ const DeleteHouse = () => {
         setIsLoaded(true);
         setHouses(res.data);
       });
-    // .catch((error) => {
-    //   setIsLoaded(true);
-    //   setError(error);
-    // });
   }, []);
 
-  // if (error) {
-  //   return (
-  //     <div>
-  //       Error:
-  //       {error.message}
-  //     </div>
-  //   );
-  // } if (!isLoaded) {
-  //   return <div>Loading...</div>;
-  // }
+  const reRenderPage = (id) => {
+    const newHouses = houses.filter((house) => house.id !== id);
+    setHouses(newHouses);
+  };
 
   if (!isLoaded) {
     return <div>Loading...</div>;
@@ -64,11 +50,16 @@ const DeleteHouse = () => {
                 {house.size}
               </small>
             </p>
-            <button type="button" className="btn btn-danger" onClick={() => axios.delete(`http://[::1]:3000/api/v1/houses/${house.id}`)}>Delete</button>
+            <button type="button" className="btn btn-danger" onClick={() => { axios.delete(`http://[::1]:3000/api/v1/houses/${house.id}`); reRenderPage(house.id); }}>Delete</button>
+
           </div>
+
         </div>
+
       ))}
+
     </div>
+
   );
 };
 
