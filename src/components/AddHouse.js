@@ -47,13 +47,17 @@ const AddHouse = () => {
           value={house.address}
           onChange={handleChange}
         />
-        <input
-          type="text"
-          name="house_type"
-          placeholder="house_type"
-          value={house.house_type}
-          onChange={handleChange}
-        />
+        <select name="house_type" value={house.house_type} onChange={handleChange}>
+          <option value="apartment">apartment</option>
+          <option value="house">house</option>
+          <option value="penthouse">penthouse</option>
+          <option value="studio">studio</option>
+          <option value="villa">villa</option>
+          <option value="igloo">igloo</option>
+          <option value="treehouse">treehouse</option>
+          <option value="row-house">row house</option>
+          <option value="other">other</option>
+        </select>
         <input
           type="integer"
           name="rooms"
@@ -61,13 +65,11 @@ const AddHouse = () => {
           value={house.rooms}
           onChange={handleChange}
         />
-        <input
-          type="boolean"
-          name="balcony"
-          placeholder="balcony"
-          value={house.balcony}
-          onChange={handleChange}
-        />
+        <select name="balcony" value={house.balcony} onChange={handleChange}>
+          <option value="true">true</option>
+          <option value="false">false</option>
+        </select>
+          
         <input
           type="integer"
           name="size"
