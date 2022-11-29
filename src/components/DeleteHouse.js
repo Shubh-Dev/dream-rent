@@ -26,7 +26,7 @@ const DeleteHouse = () => {
     <div className="card-group m-5">
       { houses.map((house) => (
         <div className="card" key={house.id}>
-          <img src={house.image_path} className="card-img-top" alt="..." style={{ width: '200px', height: '200px' }} />
+          <img src={house.image_path} alt="house" style={{ width: '200px', height: '200px' }} />
           <div className="card-body">
             <Link to={`house/${house.id}`}>
               <h5 className="card-title">
@@ -50,7 +50,7 @@ const DeleteHouse = () => {
                 {house.size}
               </small>
             </p>
-            <button type="button" className="btn btn-danger" onClick={() => { axios.delete(`http://[::1]:3000/api/v1/houses/${house.id}`); reRenderPage(house.id); }}>Delete</button>
+            <button type="button" onClick={() => { axios.delete(`http://[::1]:3000/api/v1/houses/${house.id}`); reRenderPage(house.id); }}>Delete</button>
 
           </div>
 
