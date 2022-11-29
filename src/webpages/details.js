@@ -8,7 +8,7 @@ function Details() {
   const [detail, setDetail] = useState([]);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:3000/api/v1/houses/${id}`)
+    fetch(`http://[::1]:3000/api/v1/houses/${id}`)
       .then((res) => res.json())
       .then(
         (data) => {
@@ -20,7 +20,7 @@ function Details() {
           setError(error);
         },
       );
-  });
+  }, [id]);
   if (error) {
     return (
       <div>
@@ -35,13 +35,13 @@ function Details() {
 
   if (detail) {
     return (
-      <div className="container p-2">
-        <div className="row">
-          <div className="col-sm-4 mt-5">
-            <img src={detail.image_path} className="rounded mx-auto d-block" alt="house comes here" />
+      <div className="container">
+        <div className="row d-flex gap-3 p-5">
+          <div className="col-sm-8">
+            <img src={detail.image_path} className="thumbnail img-responsive img-fluid rounded mx-auto d-block h-75 w-75" alt="house comes here" />
           </div>
-          <div className="col-sm-5" />
-          <div className="col-sm-3 mt-5">
+          {/* <div className="col-sm-2" /> */}
+          <div className="col-sm-3">
             <p className="fs-3">{detail.address}</p>
             <table className="table table-striped">
               <tbody>
