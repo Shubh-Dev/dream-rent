@@ -8,6 +8,7 @@ const AddHouse = () => {
     rooms: '',
     balcony: '',
     size: '',
+    image: null,
   });
 
   const handleChange = (e) => {
@@ -15,6 +16,10 @@ const AddHouse = () => {
   };
 
   const redirectAfterSubmit = () => window.location.replace('/');
+
+  const onImageChange = (e) => {
+    setHouse({ ...house, image: e.target.files[0] });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,6 +38,7 @@ const AddHouse = () => {
       rooms: '',
       balcony: '',
       size: '',
+      image: null,
     });
     redirectAfterSubmit();
   };
@@ -69,7 +75,7 @@ const AddHouse = () => {
           <option value="true">true</option>
           <option value="false">false</option>
         </select>
-          
+
         <input
           type="integer"
           name="size"
@@ -77,6 +83,15 @@ const AddHouse = () => {
           value={house.size}
           onChange={handleChange}
         />
+
+        <input
+          type="file"
+          accept="image/*"
+          name="image"
+          multiple={false}
+          onChange={onImageChange}
+        />
+
         <button type="submit" onSubmit={redirectAfterSubmit}>Submit</button>
       </form>
     </div>
