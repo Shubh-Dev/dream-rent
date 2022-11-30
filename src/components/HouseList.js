@@ -10,7 +10,7 @@ const HouseList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchHouses());
-  }, []);
+  }, [dispatch]);
   const houses = useSelector((state) => state.houses);
   return (
     <div className="container text-center pt-5">

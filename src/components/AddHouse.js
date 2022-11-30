@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import './addhouse.css';
 
 const AddHouse = () => {
   const URL = 'http://localhost:3000/api/v1/houses';
@@ -47,59 +48,70 @@ const AddHouse = () => {
       method: 'POST',
       body: formData,
     });
-    redirectAfterSubmit();
+    if (house.address) redirectAfterSubmit();
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="address"
-          placeholder="address"
-          value={house.address}
-          onChange={handleChange}
-        />
-        <select name="house_type" value={house.house_type} onChange={handleChange}>
-          <option value="apartment">apartment</option>
-          <option value="house">house</option>
-          <option value="penthouse">penthouse</option>
-          <option value="studio">studio</option>
-          <option value="villa">villa</option>
-          <option value="igloo">igloo</option>
-          <option value="treehouse">treehouse</option>
-          <option value="row-house">row house</option>
-          <option value="other">other</option>
-        </select>
-        <input
-          type="integer"
-          name="rooms"
-          placeholder="rooms"
-          value={house.rooms}
-          onChange={handleChange}
-        />
-        <select name="balcony" value={house.balcony} onChange={handleChange}>
-          <option value="true">true</option>
-          <option value="false">false</option>
-        </select>
-
-        <input
-          type="integer"
-          name="size"
-          placeholder="size"
-          value={house.size}
-          onChange={handleChange}
-        />
-
-        <input
-          type="file"
-          accept="image/*"
-          name="image"
-          multiple={false}
-          onChange={onImageChange}
-        />
-
-        <button type="submit" onSubmit={redirectAfterSubmit}>Submit</button>
+      <form onSubmit={handleSubmit} className="add-house-form">
+        <div className="form-group">
+          <input
+            type="text"
+            name="address"
+            placeholder="address"
+            value={house.address}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group custom-select">
+          <select name="house_type" value={house.house_type} onChange={handleChange}>
+            <option value="apartment">apartment</option>
+            <option value="house">house</option>
+            <option value="penthouse">penthouse</option>
+            <option value="studio">studio</option>
+            <option value="villa">villa</option>
+            <option value="igloo">igloo</option>
+            <option value="treehouse">treehouse</option>
+            <option value="row-house">row house</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <input
+            type="integer"
+            name="rooms"
+            placeholder="rooms"
+            value={house.rooms}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group custom-select">
+          <select name="balcony" value={house.balcony} onChange={handleChange}>
+            <option value="true">true</option>
+            <option value="false">false</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <input
+            type="integer"
+            name="size"
+            placeholder="size"
+            value={house.size}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            multiple={false}
+            onChange={onImageChange}
+          />
+        </div>
+        <div className="form-group">
+          <button type="submit" className="house-submit-btn" onSubmit={redirectAfterSubmit}>Submit</button>
+        </div>
       </form>
     </div>
   );

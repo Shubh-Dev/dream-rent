@@ -6,11 +6,6 @@ import './sidebar.css';
 const Sidebar = () => (
 
   <div className="nav-bar-container">
-
-    {/* <div className="hamburger-container">
-        <Hamburger isOpen={isOpen} toggle={toggle} />
-      </div> */}
-
     <div className="logo-container">
       <img src="2.png" alt="logo" width="80" height="80" />
     </div>
