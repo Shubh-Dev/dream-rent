@@ -11,6 +11,8 @@
   grid-template-columns: 15% 85%;
 }
 
-.main-container {
-  padding: 20px;
+@media (max-width: 768px) {
+  .App {
+    grid-template-columns: 100%;
+  }
 }

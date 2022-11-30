@@ -56,6 +56,10 @@
     display: none;
   }
 
+  .nav-bar-container {
+    border-right: none;
+  }
+
   .logo-container {
     display: none;
   }
