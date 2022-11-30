@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import AddHouse from './components/AddHouse';
@@ -14,14 +14,6 @@ import { isLogged } from './api/config';
 import Logout from './components/Logout';
 
 function App() {
-  // onclick hamburger menu sidebar will appear
-
-  const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => {
-    setSidebar(!sidebar);
-    console.log('clicked');
-  };
-
   const location = useLocation();
   useEffect(() => {
     if (!isLogged && window.location.pathname !== '/login') {
@@ -32,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <div className="hamburger">
-        <GiHamburgerMenu onClick={showSidebar} />
+        <GiHamburgerMenu />
       </div>
       <div className="sidebar-container desktop">
         <Sidebar />
