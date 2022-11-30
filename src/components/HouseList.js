@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {
   FaFacebookF, FaTwitter, FaInstagram,
 } from 'react-icons/fa';
+import { GrCaretNext, GrCaretPrevious } from 'react-icons/gr';
 import { fetchHouses } from '../redux/house/houses';
 
 const HouseList = () => {
@@ -13,10 +14,30 @@ const HouseList = () => {
   }, []);
   const houses = useSelector((state) => state.houses);
   return (
-    <div className="container text-center pt-5">
-      <h1>LATEST HOUSES</h1>
-      <h2 className="lgrey-text">Please select a house model</h2>
-      <div className="main-list d-flex flex-column container pt-5">
+    <div className="homepage-container text-center pt-5">
+      {(() => {
+        if (houses.length > 3) {
+          return (
+            <div className="pre-next-buttons">
+              <button className="btn btn-prev" type="button">
+                <GrCaretPrevious size={25} />
+              </button>
+              <button className="btn btn-next" type="button">
+                <GrCaretNext size={25} />
+              </button>
+            </div>
+          );
+        }
+        return null;
+      })()}
+      <div className="homepage-main-titles">
+        <h1>LATEST HOUSES</h1>
+        <h2 className="dgrey-text">Please select a house model</h2>
+        <div className="mt-3 d-flex justify-content-center">
+          <div className="bottom-border" />
+        </div>
+      </div>
+      <div className="main-list d-flex pt-5">
         {houses.map((house) => (
           <div className="house-container mb-3 text-center" key={house.id}>
             <Link to={`houses/${house.id}`}>
@@ -30,7 +51,7 @@ const HouseList = () => {
             <div className="mt-3 d-flex justify-content-center">
               <div className="bottom-border" />
             </div>
-            <h4 className="mt-3 lgrey-text">{house.address}</h4>
+            <h4 className="mt-3 dgrey-text house-description">{house.address}</h4>
             <div className="house-icons d-flex justify-content-center gap-3 mt-5">
               <FaFacebookF className="lgrey-text" size={30} />
               <FaTwitter className="lgrey-text" size={30} />
