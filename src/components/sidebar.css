@@ -1,7 +1,6 @@
 .nav-bar-container {
-  border: 1px red dashed;
+  border-right: 1px solid #e1e4e8;
   display: block;
-  width: 20%;
   height: 99vh;
   padding: 20px;
   position: fixed;
@@ -22,5 +21,23 @@
 }
 
 .social-logos {
-  margin-top: 30vh;
+  margin-top: 20vh;
+}
+
+.copyright-text {
+  font-size: 10px;
+}
+
+/* nav links active state */
+
+.nav-link {
+  color: #000;
+}
+
+.nav-link.active {
+  background-color: rgb(149, 242, 35);
+  width: fit-content;
+  padding: 7px;
+  color: #fff;
+  font-weight: 500;
 }
