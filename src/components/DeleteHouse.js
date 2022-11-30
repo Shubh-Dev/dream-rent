@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './deletehouse.css';
 
 const DeleteHouse = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -23,7 +24,7 @@ const DeleteHouse = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="card-group m-5">
+    <div className="delete-house-container">
       { houses.map((house) => (
         <div className="card" key={house.id}>
           <img src={house.image_path} alt="house" style={{ width: '200px', height: '200px' }} />

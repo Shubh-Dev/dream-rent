@@ -1,0 +1,8 @@
+.delete-house-container {
+    border: 1px red dashed;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: visible; 
+    height: 90vh;
+}

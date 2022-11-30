@@ -1,49 +1,72 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import SocialIcon from './SocialIcon';
 import Hamburger from './Hamburger';
 import './sidebar.css';
 
-const Sidebar = () => (
-  <div className="nav-bar-container">
+const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+  // return (
+  //   <div className="sidebar">
+  //     <Hamburger isOpen={isOpen} toggle={toggle} />
+  //     <div className={isOpen ? 'sidebar__links' : 'sidebar__links--hidden'}>
+  //       <NavLink to="/" className="sidebar__link" activeClassName="sidebar__link--active" exact>
+  //         Home
+  //       </NavLink>
+  //       <NavLink to="/about" className="sidebar__link" activeClassName="sidebar__link--active">
+  //         About
+  //       </NavLink>
+  //       <NavLink to="/projects" className="sidebar__link" activeClassName="sidebar__link--acti
+  //         Projects
+  //       </NavLink>
+  //       <NavLink to="/contact" className="sidebar__link" activeClassName="sidebar__link--active">
+  //         Contact
+  //       </NavLink>
+  //     </div>
+  //   </div>
+  // );
+  return (
 
-    <div className="hamburger-container">
-      <Hamburger />
-    </div>
+    <div className="nav-bar-container">
 
-    <div className="logo-container">
-      <h4>My-logo</h4>
-    </div>
-
-    <div className="nav-links-container">
-      <NavLink to="/">
-        HouseList
-      </NavLink>
-
-      <NavLink to="/add-house">
-        Add House
-      </NavLink>
-
-      <NavLink to="/reserve-list">
-        Reserve List
-      </NavLink>
-
-      <NavLink to="/my-reservations">
-        My Reservations
-      </NavLink>
-
-      <NavLink to="/delete-house">
-        Delete House
-      </NavLink>
-
-      <div className="social-logos">
-        <SocialIcon />
-        <p>&copy; 2022 Dream rent & Co</p>
+      <div className="hamburger-container">
+        <Hamburger isOpen={isOpen} toggle={toggle} />
       </div>
+
+      <div className="logo-container">
+        <img src="2.png" alt="logo" width="80" height="80" />
+      </div>
+
+      <div className="nav-links-container">
+        <NavLink to="/" className="nav-link" activeClassName="nav-link--active" exact>
+          HOUSE LIST
+        </NavLink>
+
+        <NavLink to="/add-house" className="nav-link" activeClassName="nav-link--active">
+          ADD HOUSE
+        </NavLink>
+
+        <NavLink to="/reserve-list" className="nav-link" activeClassName="nav-link--active">
+          RESERVE LIST
+        </NavLink>
+
+        <NavLink to="/my-reservations" className="nav-link" activeClassName="nav-link--active">
+          MY RESERVATIONS
+        </NavLink>
+
+        <NavLink to="/delete-house" className="nav-link" activeClassName="nav-link--active">
+          DELETE HOUSE
+        </NavLink>
+
+        <div className="social-logos">
+          <SocialIcon />
+          <p className="copyright-text">&copy; 2022 Dream rent & Co</p>
+        </div>
+      </div>
+
     </div>
-
-  </div>
-
-);
+  );
+};
 
 export default Sidebar;

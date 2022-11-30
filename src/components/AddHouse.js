@@ -22,6 +22,7 @@ const AddHouse = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log(JSON.stringify(house));
     e.preventDefault();
     fetch(URL, {
       method: 'POST',
@@ -40,7 +41,7 @@ const AddHouse = () => {
       size: '',
       image: null,
     });
-    redirectAfterSubmit();
+    // redirectAfterSubmit();
   };
 
   return (

@@ -5,11 +5,11 @@ import {
 
 const SocialIcon = () => (
   <div className="social-logo">
-    <TiSocialTwitter size={30} />
-    <TiSocialFacebook size={30} />
-    <TiSocialGooglePlus size={30} />
-    <TiSocialVimeo size={30} />
-    <TiSocialPinterest size={30} />
+    <TiSocialTwitter size={25} />
+    <TiSocialFacebook size={25} />
+    <TiSocialGooglePlus size={25} />
+    <TiSocialVimeo size={25} />
+    <TiSocialPinterest size={25} />
   </div>
 
 );
