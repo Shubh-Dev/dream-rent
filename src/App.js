@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import AddHouse from './components/AddHouse';
 import HouseList from './components/HouseList';
 import ReserveList from './components/ReserveList';
@@ -22,7 +23,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className="sidebar-container">
+      <div className="hamburger">
+        <GiHamburgerMenu />
+      </div>
+      <div className="sidebar-container desktop">
         <Sidebar />
       </div>
       <div className="main-container">

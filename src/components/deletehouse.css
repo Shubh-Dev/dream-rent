@@ -1,0 +1,43 @@
+.delete-house-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.card {
+  max-width: 200px;
+}
+
+.delete-house-img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 5px;
+}
+
+.card-text {
+  font-size: 15px;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .delete-house-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 20px 20px 20px;
+  }
+
+  .delete-house-img {
+    width: 110px;
+    height: 90px;
+  }
+}
