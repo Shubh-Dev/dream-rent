@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function Details() {
   const { id } = useParams();
@@ -35,14 +35,13 @@ function Details() {
 
   if (detail) {
     return (
-      <div className="container">
-        <div className="row d-flex gap-3 p-5">
-          <div className="col-sm-8">
-            <img src={detail.image_path} className="thumbnail img-responsive img-fluid rounded mx-auto d-block h-75 w-75" alt="house comes here" />
+      <div className="container-fluid">
+        <div className="row d-flex p-5">
+          <div className="col-sm-8 h-50">
+            <img src={detail.image_path} className="thumbnail img-responsive img-fluid rounded mx-auto d-block h-50 w-50" alt="house comes here" />
           </div>
-          {/* <div className="col-sm-2" /> */}
-          <div className="col-sm-3">
-            <p className="fs-3">{detail.address}</p>
+          <div className="col-sm-3 h-50">
+            <p className="fs-3 text-end">{detail.address}</p>
             <table className="table table-striped">
               <tbody>
                 <tr>
@@ -64,10 +63,14 @@ function Details() {
               </tbody>
             </table>
             <div className="d-grid gap-2 mt-5">
-              <button type="submit" className="btn btn-primary">Reserve</button>
-              <button type="submit" className="btn btn-primary">Delete</button>
+              <button type="submit" className="btn btn-success">Reserve</button>
             </div>
           </div>
+        </div>
+        <div className="row">
+          <Link to="/">
+            <button type="submit" className="btn btn-success">Back</button>
+          </Link>
         </div>
       </div>
     );

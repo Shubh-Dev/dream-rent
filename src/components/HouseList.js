@@ -32,33 +32,15 @@ const HouseList = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="card-group m-5">
+    <div className="card-group m-5" style={{ width: '25rem' }}>
       { houses.map((house) => (
-        <div className="card" key={house.id}>
-          <img src={house.image_path} className="card-img-top" alt="..." style={{ width: '200px', height: '200px' }} />
-          <div className="card-body">
+        <div className="card d-flex align-items-center border border-0" key={house.id}>
+          <img src={house.image_path} className="card-img-top img-fluid thumbnail h-50 w-50 rounded-circle" alt="house comes here" />
+          <div className="card-body align-items-center">
             <Link to={`houses/${house.id}`}>
-              <h5 className="card-title">
-                Address:
-                {house.address}
-              </h5>
+              <h5 className="card-title fs-5">{house.address}</h5>
             </Link>
-            <p className="card-text">
-              House Type:
-              {house.house_type}
-            </p>
-            <p className="card-text">
-              <small className="text-muted">
-                Rooms :
-                {house.rooms}
-              </small>
-            </p>
-            <p className="card-text">
-              <small className="text-muted">
-                Size:
-                {house.size}
-              </small>
-            </p>
+            <p className="card-text">{house.house_type}</p>
           </div>
         </div>
       ))}
