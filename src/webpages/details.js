@@ -35,7 +35,7 @@ function Details() {
 
   if (detail) {
     return (
-      <div className="container-fluid">
+      <div className="container">
         <div className="row d-flex p-5">
           <div className="col-sm-8 h-50">
             <img src={detail.image_path} className="thumbnail img-responsive img-fluid rounded mx-auto d-block h-50 w-50" alt="house comes here" />
