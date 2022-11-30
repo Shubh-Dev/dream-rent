@@ -1,28 +1,9 @@
 export default class houseAPI {
-  static fetchHouses = () => {
-    const houseArr = [];
+  static fetchHouses = async () => {
     const houseAPIURL = 'http://[::1]:3000/api/v1/houses';
-    return fetch(houseAPIURL)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((json) => {
-        Object.keys(json).forEach((id) => {
-          houseArr.push({
-            id,
-            address: json[id][0].address,
-            rooms: json[id][0].rooms,
-            size: json[id][0].size,
-            balcony: json[id][0].balcony,
-            house_type: json[id][0].house_type,
-            image: json[id][0].image,
-          });
-        });
-        return houseArr;
-      });
+    const response = await fetch(houseAPIURL);
+    const data = await response.json();
+    return data;
   };
 
   static deleteHouse = async (id) => {
