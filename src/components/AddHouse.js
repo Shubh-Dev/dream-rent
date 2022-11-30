@@ -52,6 +52,7 @@ const AddHouse = () => {
 
   return (
     <div>
+      <h2>Add House</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
