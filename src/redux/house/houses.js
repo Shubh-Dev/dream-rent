@@ -11,6 +11,8 @@ const initialHouseArray = [];
 
 const houseReducer = (state = initialHouseArray, action) => {
   switch (action.type) {
+    case 'GET_HOUSES':
+      return action.payload;
     case 'ADD_HOUSE/fulfilled':
       return [...state, action.payload];
 
@@ -36,10 +38,10 @@ export const getAllHouses = (payload) => (
   }
 );
 
-export const fetchHouses = createAsyncThunk(GET_HOUSES, async (post, { dispatch }) => {
+export const fetchHouses = createAsyncThunk(GET_HOUSES, async (get, { dispatch }) => {
   try {
-    const response = await HouseAPI.fetchBooks();
-    dispatch(getAllHouses(response)); // fire for this action creator
+    const response = await HouseAPI.fetchHouses();
+    dispatch(getAllHouses(response));
   } catch (err) {
     dispatch({ type: 'GET_HOUSES_REJECTED', payload: err });
   }

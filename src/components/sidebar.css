@@ -24,10 +24,6 @@
   margin-top: 20vh;
 }
 
-.hamburger-container {
-  display: none;
-}
-
 .copyright-text {
   font-size: 10px;
 }
@@ -44,26 +40,4 @@
   padding: 7px;
   color: #fff;
   font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .nav-links-container {
-    display: none;
-  }
-
-  .nav-bar-container {
-    border-right: none;
-  }
-
-  .logo-container {
-    display: none;
-  }
-
-  .hamburger-container {
-    display: block;
-  }
-
-  .show {
-    display: block;
-  }
 }

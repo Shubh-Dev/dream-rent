@@ -1,67 +1,44 @@
-import { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import {
+  FaFacebookF, FaTwitter, FaInstagram,
+} from 'react-icons/fa';
+import { fetchHouses } from '../redux/house/houses';
 
 const HouseList = () => {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [houses, setHouses] = useState([]);
-
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetch('http://[::1]:3000/api/v1/houses')
-      .then((res) => res.json())
-      .then(
-        (data) => {
-          setIsLoaded(true);
-          setHouses(data);
-        },
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        },
-      );
+    dispatch(fetchHouses());
   }, []);
-
-  if (error) {
-    return (
-      <div>
-        Error:
-        {error.message}
-      </div>
-    );
-  } if (!isLoaded) {
-    return <div>Loading...</div>;
-  }
+  const houses = useSelector((state) => state.houses);
   return (
-    <div className="card-group m-5">
-      { houses.map((house) => (
-        <div className="card" key={house.id}>
-          <img src={house.image_path} className="card-img-top" alt="..." style={{ width: '200px', height: '200px' }} />
-          <div className="card-body">
+    <div className="container text-center pt-5">
+      <h1>LATEST HOUSES</h1>
+      <h2 className="lgrey-text">Please select a house model</h2>
+      <div className="main-list d-flex flex-column container pt-5">
+        {houses.map((house) => (
+          <div className="house-container mb-3 text-center" key={house.id}>
             <Link to={`houses/${house.id}`}>
-              <h5 className="card-title">
-                Address:
-                {house.address}
-              </h5>
+              <img className="homepage-house-img " style={{ width: '100%', height: '100%' }} src={house.image_path} alt="house_image" />
             </Link>
-            <p className="card-text">
-              House Type:
-              {house.house_type}
-            </p>
-            <p className="card-text">
-              <small className="text-muted">
-                Rooms :
-                {house.rooms}
-              </small>
-            </p>
-            <p className="card-text">
-              <small className="text-muted">
-                Size:
-                {house.size}
-              </small>
-            </p>
+            <h3 className="mt-3">
+              {house.house_type.toUpperCase()}
+              {' '}
+              HOUSE
+            </h3>
+            <div className="mt-3 d-flex justify-content-center">
+              <div className="bottom-border" />
+            </div>
+            <h4 className="mt-3 lgrey-text">{house.address}</h4>
+            <div className="house-icons d-flex justify-content-center gap-3 mt-5">
+              <FaFacebookF className="lgrey-text" size={30} />
+              <FaTwitter className="lgrey-text" size={30} />
+              <FaInstagram className="lgrey-text" size={30} />
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

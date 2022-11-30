@@ -1,18 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@700&display=swap');
+
+:root {
+  --light-grey: #d1d3d4;
+  --white: #fff;
+}
+
 * {
   list-style: none;
   text-decoration: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Anek Devanagari', sans-serif;
+}
+
+.sidebar-container {
+  display: none;
 }
 
 .App {
-  display: grid;
-  grid-template-columns: 15% 85%;
+  min-height: 100vh;
+}
+
+.hamburger {
+  padding: 10px;
+  position: absolute;
 }
 
 @media (max-width: 768px) {
   .App {
     grid-template-columns: 100%;
+  }
+}
+
+.bottom-border {
+  width: 30%;
+  border-bottom: 3px dotted var(--light-grey);
+}
+
+.lgrey-text {
+  color: var(--light-grey);
+}
+
+.house-container {
+  min-height: 80vh;
+}
+
+.house-icons * {
+  border: 3px solid var(--light-grey);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.homepage-house-img {
+  border-radius: 20%;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .sidebar-container {
+    display: block;
+  }
+
+  .App {
+    display: grid;
+    grid-template-columns: 20% 80%;
   }
 }
