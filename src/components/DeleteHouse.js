@@ -28,7 +28,6 @@ const DeleteHouse = () => {
         <div className="card" key={house.id}>
           <img src={house.image_path} alt="house" className="delete-house-img" />
           <div className="card-body">
-            <br />
             <h5 className="card-title">
               Address:
               {house.address}
@@ -49,7 +48,7 @@ const DeleteHouse = () => {
                 {house.size}
               </small>
             </p>
-            <button type="button" onClick={() => { axios.delete(`http://[::1]:3000/api/v1/houses/${house.id}`); reRenderPage(house.id); }}>Delete</button>
+            <button type="button" className="delete-btn" onClick={() => { axios.delete(`http://[::1]:3000/api/v1/houses/${house.id}`); reRenderPage(house.id); }}>Delete</button>
 
           </div>
 

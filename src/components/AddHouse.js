@@ -22,7 +22,6 @@ const AddHouse = () => {
   };
 
   const handleSubmit = (e) => {
-    console.log(JSON.stringify(house));
     e.preventDefault();
     fetch(URL, {
       method: 'POST',
