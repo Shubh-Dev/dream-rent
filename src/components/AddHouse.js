@@ -15,23 +15,9 @@ const AddHouse = () => {
     setHouse({ ...house, [e.target.name]: e.target.value });
   };
 
-  const redirectAfterSubmit = () => window.location.replace('/');
+  // const redirectAfterSubmit = () => window.location.replace('/');
 
-  const onImageChange = (e) => {
-    setHouse({ ...house, image: e.target.files[0] });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch(URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(house),
-    })
-      .then((res) => res.json());
-
+  const redirectAfterSubmit = () => {
     setHouse({
       address: '',
       house_type: '',
@@ -40,7 +26,28 @@ const AddHouse = () => {
       size: '',
       image: null,
     });
-    // redirectAfterSubmit();
+    window.location.replace('/');
+  };
+
+  const onImageChange = (e) => {
+    setHouse({ ...house, image: e.target.files[0] });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('house[address]', house.address);
+    formData.append('house[house_type]', house.house_type);
+    formData.append('house[rooms]', house.rooms);
+    formData.append('house[balcony]', house.balcony);
+
+    formData.append('house[size]', house.size);
+    formData.append('house[image]', house.image);
+    fetch(URL, {
+      method: 'POST',
+      body: formData,
+    });
+    redirectAfterSubmit();
   };
 
   return (
