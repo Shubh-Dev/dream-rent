@@ -10,7 +10,7 @@ const HouseList = () => {
   }, []);
   const houses = useSelector((state) => state.houses);
   return (
-    <div className="d-flex container">
+    <div className="mainList d-flex flex-column container">
       {houses.map((house) => (
         <div className="card" key={house.id}>
           <Link to={`houses/${house.id}`}>

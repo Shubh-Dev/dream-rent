@@ -25,24 +25,4 @@
   margin-top: 30vh;
 }
 
-.hamburger-container {
-  display: none;
-}
 
-@media (max-width: 768px) {
-  .nav-links-container {
-    display: none;
-  }
-
-  .logo-container {
-    display: none;
-  }
-
-  .hamburger-container {
-    display: block;
-  }
-
-  .show {
-    display: block;
-  }
-}

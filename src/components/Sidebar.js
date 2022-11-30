@@ -1,15 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import SocialIcon from './SocialIcon';
-import Hamburger from './Hamburger';
+// import Hamburger from './Hamburger';
 import './sidebar.css';
 
 const Sidebar = () => (
   <div className="nav-bar-container">
 
-    <div className="hamburger-container">
+    {/* <div className="hamburger-container">
       <Hamburger />
-    </div>
+    </div> */}
 
     <div className="logo-container">
       <h4>My-logo</h4>

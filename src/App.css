@@ -5,12 +5,30 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.App {
-  display: grid;
-  grid-template-columns: 20% 80%;
+.sidebar-container{
+  display: none;
 }
-
+.App {
+  min-height: 100vh;
+}
+.hamburger {
+  padding: 10px;
+  position: absolute;
+}
 .main-container {
   padding: 20px;
 }
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .sidebar-container {
+    display: block;
+  }
+  .App {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  }
+}
+
