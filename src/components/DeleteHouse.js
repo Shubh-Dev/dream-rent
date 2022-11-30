@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './deletehouse.css';
 
@@ -27,14 +26,13 @@ const DeleteHouse = () => {
     <div className="delete-house-container">
       { houses.map((house) => (
         <div className="card" key={house.id}>
-          <img src={house.image_path} alt="house" style={{ width: '200px', height: '200px' }} />
+          <img src={house.image_path} alt="house" className="delete-house-img" />
           <div className="card-body">
-            <Link to={`house/${house.id}`}>
-              <h5 className="card-title">
-                Address:
-                {house.address}
-              </h5>
-            </Link>
+            <br />
+            <h5 className="card-title">
+              Address:
+              {house.address}
+            </h5>
             <p className="card-text">
               House Type:
               {house.house_type}
