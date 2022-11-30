@@ -38,7 +38,6 @@
   color: #000;
 }
 
-
 .nav-link.active {
   background-color: rgb(149, 242, 35);
   width: fit-content;
@@ -46,10 +45,6 @@
   color: #fff;
   font-weight: 500;
 }
-
-
-
-
 
 @media (max-width: 768px) {
   .nav-links-container {

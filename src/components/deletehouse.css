@@ -1,33 +1,32 @@
 .delete-house-container {
-    border: 1px red dashed;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 15px;
+  border: 1px red dashed;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
 }
 
 .card {
-    max-width: 200px;
+  max-width: 200px;
 }
 
 .delete-house-img {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 .card-text {
-    font-size: 15px;
+  font-size: 15px;
 }
 
+@media (max-width: 768px) {
+  .delete-house-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+  }
 
-@media(max-width: 768px) {
-    .delete-house-container {
-        grid-template-columns: 1fr 1fr;
-        padding: 20px;
-    }
-
-    .delete-house-img {
-        width: 90px;
-        height: 90px;
-    }
+  .delete-house-img {
+    width: 90px;
+    height: 90px;
+  }
 }
