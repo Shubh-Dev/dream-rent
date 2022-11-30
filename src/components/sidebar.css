@@ -3,6 +3,7 @@
   display: block;
   height: 99vh;
   padding: 20px;
+  width: 20%;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,6 +15,7 @@
   display: flex;
   flex-direction: column;
   gap: 5vh;
+  white-space: nowrap;
 }
 
 .logo-container {
@@ -35,7 +37,7 @@
 }
 
 .nav-link.active {
-  background-color: rgb(149, 242, 35);
+  background-color: var(--green);
   width: fit-content;
   padding: 7px;
   color: #fff;
