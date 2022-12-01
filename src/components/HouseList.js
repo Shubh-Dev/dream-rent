@@ -40,14 +40,14 @@ const HouseList = () => {
         }
         return null;
       })()}
-      <div className="homepage-main-titles">
+      <div className="homepage-main-titles d-flex flex-column align-items-center">
         <h1>LATEST HOUSES</h1>
         <h2 className="dgrey-text">Please select a house model</h2>
         <div className="mt-3 d-flex justify-content-center">
           <div className="bottom-border" />
         </div>
       </div>
-      <div className="main-list d-flex pt-5" ref={contentWrapper}>
+      <div className="main-list d-flex pt-5 align-items-center" ref={contentWrapper}>
         {houses.map((house) => (
           <House
             key={house.id}

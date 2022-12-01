@@ -44,6 +44,8 @@
 
 .homepage-house-img {
   border-radius: 20%;
+  max-width: 400px;
+  margin: auto;
 }
 
 .main-list {
@@ -55,9 +57,14 @@
 }
 
 .house-description {
+  width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 0 10px;
+}
+
+.homepage-main-titles {
+  padding-top: 50px;
 }
 
 /* Desktop Version */
@@ -82,20 +89,12 @@
   .main-list {
     width: 100%;
     flex-direction: row;
-    margin: 0 30px;
-    padding: 0 20px;
-    gap: 0 30px;
     overflow-x: hidden;
     scroll-behavior: smooth;
   }
 
-  .homepage-main-titles {
-    padding-top: 50px;
-  }
-
   .house-container {
     width: 30%;
-    height: 40%;
     min-height: 60vh;
   }
 
@@ -118,5 +117,10 @@
     right: 0;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
+  }
+
+  .homepage-house-img {
+    max-width: 250px;
+    margin: auto;
   }
 }

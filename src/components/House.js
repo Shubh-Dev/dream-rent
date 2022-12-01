@@ -7,14 +7,12 @@ import {
 const House = ({
   index, image, type, address,
 }) => (
-  <div className="house-container mb-3 text-center">
+  <div className="house-container d-flex flex-column align-items-center mb-3">
     <Link to={`houses/${index}`}>
-      <img className="homepage-house-img " style={{ width: '100%', height: '100%' }} src={image} alt="house_image" />
+      <img className="homepage-house-img" src={image} alt="house_image" />
     </Link>
     <h3 className="mt-3">
       {type.toUpperCase()}
-      {' '}
-      HOUSE
     </h3>
     <div className="mt-3 d-flex justify-content-center">
       <div className="bottom-border" />
