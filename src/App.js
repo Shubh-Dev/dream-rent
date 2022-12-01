@@ -9,6 +9,7 @@ import Sidebar from './components/Sidebar';
 import DeleteHouse from './components/DeleteHouse';
 import './App.css';
 import Details from './webpages/details';
+import Reserves from './webpages/reserves';
 import Login from './components/Login';
 import { isLogged } from './api/config';
 import Logout from './components/Logout';
@@ -33,6 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HouseList />} />
           <Route path="/houses/:id" element={<Details />} />
+          <Route path="/reserves" element={<Reserves />} />
           <Route path="/add-house" element={<AddHouse />} />
           <Route path="/reserve-list" element={<ReserveList />} />
           <Route path="/my-reservations" element={<MyReservations />} />
