@@ -53,6 +53,7 @@
 .pre-next-buttons > .btn {
   display: none;
 }
+
 .house-description {
   overflow: hidden;
   text-overflow: ellipsis;
