@@ -12,7 +12,7 @@ const Sidebar = () => (
       </div> */}
 
     <div className="logo-container">
-      <img src="2.png" alt="logo" width="80" height="80" />
+      <img src="./logo.png" alt="logo" width="90" height="90" />
     </div>
 
     <div className="nav-links-container">
