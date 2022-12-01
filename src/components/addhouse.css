@@ -1,8 +1,7 @@
 .add-house-form {
-  width: 100%;
   max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 3rem auto;
+  padding: 50px 20px 20px 20px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

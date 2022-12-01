@@ -16,8 +16,6 @@ const AddHouse = () => {
     setHouse({ ...house, [e.target.name]: e.target.value });
   };
 
-  // const redirectAfterSubmit = () => window.location.replace('/');
-
   const redirectAfterSubmit = () => {
     setHouse({
       address: '',
@@ -52,8 +50,8 @@ const AddHouse = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="add-house-form">
+    <div className="add-house-form">
+      <form onSubmit={handleSubmit}>
         <div className="form-group">
           <input
             type="text"

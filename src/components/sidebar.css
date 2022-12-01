@@ -2,8 +2,7 @@
   border-right: 1px solid #e1e4e8;
   height: 99vh;
   padding: 20px;
-  overflow: hidden;
- }
+}
 
 .nav-links-container {
   width: 100%;
@@ -32,10 +31,18 @@
 }
 
 .nav-link.active {
-  background-color: rgb(149, 242, 35);
-  padding:  5px 10px;
   color: #fff;
+  background-color: rgb(149, 242, 35);
+  padding: 5px 6px;
+  width: fit-content;
   font-weight: 500;
 }
 
+.mobile-nav-link {
+  text-decoration: none;
+  color: #fff;
+}
 
+.mobile-nav-link.active {
+  color: rgb(63, 61, 60);
+}

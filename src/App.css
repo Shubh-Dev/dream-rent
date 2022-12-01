@@ -28,7 +28,6 @@
 
 .hamburger {
   padding: 10px;
-  position: absolute;
 }
 
 @media (max-width: 768px) {
