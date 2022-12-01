@@ -11,7 +11,6 @@ const Sidebar = () => {
       <div className={width ? 'no-display' : 'logo-container'}>
         <img src="2.png" alt="logo" width="80" height="80" />
       </div>
-
       <div className="nav-links-container">
         <NavLink to="/" className={width ? 'mobile-nav-link' : 'nav-link'} exact>
           HOUSE LIST

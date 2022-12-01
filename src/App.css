@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@700&display=swap');
-
 :root {
   --light-grey: #d1d3d4;
+  --darker-grey: #9b9b9b;
   --white: #fff;
+  --green: #97bf11;
 }
 
 .no-display {
@@ -30,14 +31,8 @@
   padding: 10px;
 }
 
-@media (max-width: 768px) {
-  .App {
-    grid-template-columns: 100%;
-  }
-}
-
 .bottom-border {
-  width: 30%;
+  width: 150px;
   border-bottom: 3px dotted var(--light-grey);
 }
 
@@ -45,7 +40,12 @@
   color: var(--light-grey);
 }
 
+.dgrey-text {
+  color: var(--darker-grey);
+}
+
 .house-container {
+  padding: 0 5%;
   min-height: 80vh;
 }
 
@@ -59,7 +59,25 @@
   border-radius: 20%;
 }
 
+.main-list {
+  flex-direction: column;
+}
+
+.pre-next-buttons > .btn {
+  display: none;
+}
+
+/* Desktop Version */
+
 @media (min-width: 768px) {
+  .App {
+    overflow: hidden;
+  }
+
+  .main-container {
+    margin-left: 20%;
+  }
+
   .hamburger {
     display: none;
   }
@@ -68,8 +86,50 @@
     display: block;
   }
 
-  .App {
-    display: grid;
-    grid-template-columns: 200px 1fr;
+  .main-list {
+    width: 100%;
+    flex-direction: row;
+    margin: 0 30px;
+    padding: 0 20px;
+    gap: 0 30px;
+    overflow-x: scroll;
+  }
+
+  .house-description {
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100px;
+  }
+
+  .homepage-main-titles {
+    padding-top: 50px;
+  }
+
+  .house-container {
+    width: 30%;
+    height: 40%;
+    min-height: 60vh;
+  }
+
+  .pre-next-buttons > .btn {
+    display: block;
+    background-color: var(--green);
+    position: absolute;
+    bottom: 50%;
+    border-radius: 0;
+  }
+
+  .btn.btn-prev {
+    left: 20%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  .btn.btn-next {
+    color: var(--white);
+    right: 0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
   }
 }
