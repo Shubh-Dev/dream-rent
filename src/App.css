@@ -57,7 +57,7 @@
 }
 
 .house-description {
-  width: 90%;
+  width: 50%;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 0 10px;
@@ -122,5 +122,9 @@
   .homepage-house-img {
     max-width: 250px;
     margin: auto;
+  }
+
+  .house-description {
+    width: 90%;
   }
 }
