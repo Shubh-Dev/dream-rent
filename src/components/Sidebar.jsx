@@ -1,19 +1,21 @@
-// import { React, useState } from 'react';
+import { React } from 'react';
 import { NavLink } from 'react-router-dom';
 import SocialIcon from './SocialIcon';
 import './sidebar.css';
 
-const Sidebar = () => (
+const Sidebar = () => {
+  const width = window.innerWidth < 768;
 
-  <div className="nav-bar-container">
-    <div className="logo-container">
-      <img src="2.png" alt="logo" width="80" height="80" />
-    </div>
+  return (
+    <div className="nav-bar-container">
+      <div className={width ? 'no-display' : 'logo-container'}>
+        <img src="2.png" alt="logo" width="80" height="80" />
+      </div>
 
-    <div className="nav-links-container">
-      <NavLink to="/" className="nav-link" activeClassName="nav-link--active" exact>
-        HOUSE LIST
-      </NavLink>
+      <div className="nav-links-container">
+        <NavLink to="/" className="nav-link" activeClassName="nav-link--active" exact>
+          HOUSE LIST
+        </NavLink>
 
       <NavLink to="/add-house" className="nav-link" activeClassName="nav-link--active">
         ADD HOUSE
@@ -31,12 +33,13 @@ const Sidebar = () => (
         DELETE HOUSE
       </NavLink>
 
-      <div className="social-logos">
+      <div className={ width ? 'no-display' : 'social-logos'}>
         <SocialIcon />
         <p className="copyright-text">&copy; 2022 Dream rent & Co</p>
       </div>
     </div>
 
   </div>
-);
+  );
+};
 export default Sidebar;

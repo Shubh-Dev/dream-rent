@@ -1,12 +1,9 @@
 .nav-bar-container {
   border-right: 1px solid #e1e4e8;
-  display: block;
   height: 99vh;
   padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+  overflow: hidden;
+ }
 
 .nav-links-container {
   width: 100%;
@@ -36,8 +33,9 @@
 
 .nav-link.active {
   background-color: rgb(149, 242, 35);
-  width: fit-content;
-  padding: 7px;
+  padding:  5px 10px;
   color: #fff;
   font-weight: 500;
 }
+
+
