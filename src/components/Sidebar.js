@@ -16,23 +16,23 @@ const Sidebar = () => (
     </div>
 
     <div className="nav-links-container">
-      <NavLink to="/" className="nav-link" activeClassName="nav-link--active" exact>
+      <NavLink to="/" className="nav-link" activeclassname="nav-link--active" exact>
         HOUSE LIST
       </NavLink>
 
-      <NavLink to="/add-house" className="nav-link" activeClassName="nav-link--active">
+      <NavLink to="/add-house" className="nav-link" activeclassname="nav-link--active">
         ADD HOUSE
       </NavLink>
 
-      <NavLink to="/reserve-list" className="nav-link" activeClassName="nav-link--active">
+      <NavLink to="/reserve-list" className="nav-link" activeclassname="nav-link--active">
         RESERVE LIST
       </NavLink>
 
-      <NavLink to="/my-reservations" className="nav-link" activeClassName="nav-link--active">
+      <NavLink to="/my-reservations" className="nav-link" activeclassname="nav-link--active">
         MY RESERVATIONS
       </NavLink>
 
-      <NavLink to="/delete-house" className="nav-link" activeClassName="nav-link--active">
+      <NavLink to="/delete-house" className="nav-link" activeclassname="nav-link--active">
         DELETE HOUSE
       </NavLink>
 
