@@ -53,6 +53,11 @@
 .pre-next-buttons > .btn {
   display: none;
 }
+.house-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+}
 
 /* Desktop Version */
 
@@ -62,7 +67,7 @@
   }
 
   .main-container {
-    margin-left: 20%;
+    margin-left: 15%;
   }
 
   .hamburger {
@@ -79,14 +84,8 @@
     margin: 0 30px;
     padding: 0 20px;
     gap: 0 30px;
-    overflow-x: scroll;
-  }
-
-  .house-description {
-    word-wrap: break-word;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 100px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   .homepage-main-titles {
@@ -108,7 +107,7 @@
   }
 
   .btn.btn-prev {
-    left: 20%;
+    left: 15%;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
   }

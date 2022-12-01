@@ -31,7 +31,7 @@ function App() {
       </div>
       <div className="main-container">
         <Routes>
-          <Route path="/" element={<HouseList />} />
+          <Route path="/" exact="true" element={<HouseList />} />
           <Route path="/houses/:id" element={<Details />} />
           <Route path="/add-house" element={<AddHouse />} />
           <Route path="/reserve-list" element={<ReserveList />} />
