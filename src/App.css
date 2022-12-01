@@ -72,11 +72,8 @@
 
 @media (min-width: 768px) {
   .App {
-    overflow: hidden;
-  }
-
-  .main-container {
-    margin-left: 20%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
   }
 
   .hamburger {
