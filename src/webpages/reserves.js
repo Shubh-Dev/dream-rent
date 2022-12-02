@@ -15,7 +15,7 @@ const Reserve = () => {
   return (
     <form className="col gx-3 gy-2 align-items-center m-5 p-5">
       <div className="row-sm-3 pb-3">
-        <div className="col-sm-4">
+        <div className="input-group">
           <div className="input-group date" id="datepicker">
             <input type="text" className="form-control" />
             <span className="input-group-append">
@@ -28,7 +28,9 @@ const Reserve = () => {
       </div>
       <div className="row-sm-3 pb-3">
         <div className="input-group">
-          <input type="text" className="form-control" id="specificSizeInputGroupUsername" placeholder="Select Time" />
+          <div className="input-group date" id="timepicker">
+            <input type="time" className="form-control" />
+          </div>
         </div>
       </div>
       <div className="row-sm-3 pb-3">
