@@ -32,6 +32,9 @@
 }
 
 .house-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 5%;
   min-height: 80vh;
 }
@@ -49,7 +52,9 @@
 }
 
 .main-list {
+  display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .pre-next-buttons > .btn {
@@ -87,14 +92,18 @@
   }
 
   .main-list {
-    width: 100%;
-    flex-direction: row;
+    display: grid;
+    margin: 0 50px;
+    grid-auto-flow: column;
+    grid-gap: 10px;
     overflow-x: hidden;
     scroll-behavior: smooth;
   }
 
   .house-container {
-    width: 30%;
+    display: grid;
+    width: 100%;
+    padding: 30px;
     min-height: 60vh;
   }
 
@@ -102,7 +111,7 @@
     display: block;
     background-color: var(--green);
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     border-radius: 0;
   }
 

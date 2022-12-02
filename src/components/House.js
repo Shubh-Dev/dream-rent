@@ -7,7 +7,7 @@ import {
 const House = ({
   index, image, type, address,
 }) => (
-  <div className="house-container d-flex flex-column align-items-center mb-3">
+  <div className="house-container mb-3">
     <Link to={`houses/${index}`}>
       <img className="homepage-house-img" src={image} alt="house_image" />
     </Link>

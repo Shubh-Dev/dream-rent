@@ -47,7 +47,7 @@ const HouseList = () => {
           <div className="bottom-border" />
         </div>
       </div>
-      <div className="main-list d-flex pt-5 align-items-center" ref={contentWrapper}>
+      <div className="main-list pt-5" ref={contentWrapper}>
         {houses.map((house) => (
           <House
             key={house.id}
