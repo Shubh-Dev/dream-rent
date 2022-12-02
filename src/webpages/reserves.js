@@ -29,13 +29,8 @@ const Reserve = () => {
     <form onSubmit={handleSubmit} className="col gx-3 gy-2 align-items-center m-5 p-5">
       <div className="row-sm-3 pb-3">
         <div className="input-group">
-          <div className="input-group date" id="datepicker">
-            <input type="text" className="form-control" id="date" />
-            <span className="input-group-append">
-              <span className="input-group-text bg-white d-block">
-                <i className="fa fa-calendar" />
-              </span>
-            </span>
+          <div className="input-group date">
+            <input type="date" className="form-control" id="date" />
           </div>
         </div>
       </div>
