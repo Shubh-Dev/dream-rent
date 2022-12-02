@@ -11,15 +11,19 @@ const Hamburger = () => {
     zIndex: '1',
     bottom: '0',
     left: '0',
-    backgroundColor: 'rgb(149, 242, 35)',
+    backgroundColor: 'rgba(89, 90, 87, 0.905)',
     overflowX: 'hidden',
-    transition: '0.5s',
+    transfrom: '0.5s',
+    transition: 'transform 0.5s',
     paddingTop: '60px',
+
   };
 
   const crosBtnStyle = {
     position: 'fixed',
     zIndex: '2',
+    color: 'white',
+    fontSize: '22px',
   };
 
   const hamburgerStyle = {
