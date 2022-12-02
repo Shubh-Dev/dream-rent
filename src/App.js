@@ -13,6 +13,7 @@ import Reserves from './webpages/reserves';
 import Login from './components/Login';
 import { isLogged } from './api/config';
 import Logout from './components/Logout';
+import ReservationForm from './components/ReservationForm';
 
 function App() {
   const location = useLocation();
@@ -39,10 +40,10 @@ function App() {
           <Route path="/reserve-list" element={<ReserveList />} />
           <Route path="/my-reservations" element={<MyReservations />} />
           <Route path="/delete-house" element={<DeleteHouse />} />
+          <Route path="/reservation-form/:id" element={<ReservationForm />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
         </Routes>
-
       </div>
     </div>
   );
