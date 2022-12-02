@@ -40,7 +40,7 @@ function App() {
           <Route path="/reserve-list" element={<ReserveList />} />
           <Route path="/my-reservations" element={<MyReservations />} />
           <Route path="/delete-house" element={<DeleteHouse />} />
-          <Route path="/reservation-form/:id" element={<ReservationForm />} />
+          <Route path="/reservation-form/:houseId" element={<ReservationForm />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
         </Routes>
