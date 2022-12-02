@@ -12,6 +12,7 @@
   background-image: url("../../public/loginbgimg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 .login-logo {
@@ -54,4 +55,10 @@
   background-color: var(--white);
   border: none;
   box-shadow: 1px 1px 5px 1px #000;
+}
+
+@media (min-width: 768px) {
+  .login_container {
+    background-position-y: 100%;
+  }
 }
