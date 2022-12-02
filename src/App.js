@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import AddHouse from './components/AddHouse';
 import HouseList from './components/HouseList';
 import ReserveList from './components/ReserveList';
@@ -12,6 +11,7 @@ import Details from './webpages/details';
 import Login from './components/Login';
 import { isLogged } from './api/config';
 import Logout from './components/Logout';
+import Hamburger from './components/Hamburger';
 
 function App() {
   const location = useLocation();
@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <div className="hamburger">
-        <GiHamburgerMenu />
+        <Hamburger />
       </div>
       <div className="sidebar-container desktop">
         <Sidebar />
