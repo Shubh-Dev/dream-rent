@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@700&display=swap');
+
 :root {
   --light-grey: #d1d3d4;
   --darker-grey: #9b9b9b;
   --white: #fff;
   --green: #97bf11;
   --reserve-form-background: url("https://raw.githubusercontent.com/Shubh-Dev/dream-rent/27e26f8dba321e38a0da6f9bb261146edc87ba09/public/loginbgimg.jpg");
+}
+
+.no-display {
+  display: none;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Anek Devanagari', sans-serif;
 }
 
 .sidebar-container {
@@ -16,7 +31,6 @@
 
 .hamburger {
   padding: 10px;
-  position: absolute;
 }
 
 .bottom-border {
@@ -33,6 +47,9 @@
 }
 
 .house-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 5%;
   min-height: 80vh;
 }
@@ -45,14 +62,30 @@
 
 .homepage-house-img {
   border-radius: 20%;
+  max-width: 400px;
+  margin: auto;
 }
 
 .main-list {
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 .pre-next-buttons > .btn {
   display: none;
+}
+
+.house-description {
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+}
+
+.homepage-main-titles {
+  padding-top: 50px;
 }
 
 /* Desktop Version */
@@ -60,10 +93,8 @@
 @media (min-width: 768px) {
   .App {
     overflow: hidden;
-  }
-
-  .main-container {
-    margin-left: 20%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
   }
 
   .hamburger {
@@ -75,28 +106,18 @@
   }
 
   .main-list {
-    width: 100%;
-    flex-direction: row;
-    margin: 0 30px;
-    padding: 0 20px;
-    gap: 0 30px;
-    overflow-x: scroll;
-  }
-
-  .house-description {
-    word-wrap: break-word;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 100px;
-  }
-
-  .homepage-main-titles {
-    padding-top: 50px;
+    display: grid;
+    margin: 0 10%;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   .house-container {
-    width: 30%;
-    height: 40%;
+    display: grid;
+    width: 100%;
+    padding: 30px;
     min-height: 60vh;
   }
 
@@ -104,12 +125,13 @@
     display: block;
     background-color: var(--green);
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
+    padding: 20px 30px;
     border-radius: 0;
   }
 
   .btn.btn-prev {
-    left: 20%;
+    left: 200px;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
   }
@@ -119,5 +141,14 @@
     right: 0;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
+  }
+
+  .homepage-house-img {
+    max-width: 250px;
+    margin: auto;
+  }
+
+  .house-description {
+    width: 90%;
   }
 }

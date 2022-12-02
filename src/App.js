@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import AddHouse from './components/AddHouse';
 import HouseList from './components/HouseList';
 import ReserveList from './components/ReserveList';
 import MyReservations from './components/MyReservations';
+import ReservationForm from './components/ReservationForm';
 import Sidebar from './components/Sidebar';
 import DeleteHouse from './components/DeleteHouse';
 import './App.css';
@@ -13,7 +13,7 @@ import Reserves from './webpages/reserves';
 import Login from './components/Login';
 import { isLogged } from './api/config';
 import Logout from './components/Logout';
-import ReservationForm from './components/ReservationForm';
+import Hamburger from './components/Hamburger';
 
 function App() {
   const location = useLocation();
@@ -26,14 +26,14 @@ function App() {
   return (
     <div className="App">
       <div className="hamburger">
-        <GiHamburgerMenu />
+        <Hamburger />
       </div>
       <div className="sidebar-container desktop">
         <Sidebar />
       </div>
       <div className="main-container">
         <Routes>
-          <Route path="/" element={<HouseList />} />
+          <Route path="/" exact="true" element={<HouseList />} />
           <Route path="/houses/:id" element={<Details />} />
           <Route path="/reserves" element={<Reserves />} />
           <Route path="/add-house" element={<AddHouse />} />

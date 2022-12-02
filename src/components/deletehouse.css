@@ -1,8 +1,7 @@
 .delete-house-container {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
 }
 
@@ -39,5 +38,7 @@
   .delete-house-img {
     width: 110px;
     height: 90px;
+    padding-top: 13px;
+    padding-left: 13px;
   }
 }
