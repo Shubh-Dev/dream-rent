@@ -32,6 +32,10 @@ const Sidebar = () => {
           DELETE HOUSE
         </NavLink>
 
+        <NavLink to="/logout" className={width ? 'mobile-nav-link logout' : 'nav-link logout'}>
+          Log out
+        </NavLink>
+
         <div className={width ? 'no-display' : 'social-logos'}>
           <SocialIcon />
           <p className="copyright-text">&copy; 2022 Dream rent & Co</p>
