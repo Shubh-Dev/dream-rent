@@ -50,7 +50,7 @@ function Details() {
                 </tr>
                 <tr>
                   <td>Balcony</td>
-                  <td>{detail.balcony}</td>
+                  <td>{String(detail.balcony)}</td>
                 </tr>
                 <tr>
                   <td>Rooms</td>

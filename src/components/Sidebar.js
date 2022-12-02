@@ -32,6 +32,10 @@ const Sidebar = () => (
         MY RESERVATIONS
       </NavLink>
 
+      <NavLink to="/reserves" className="nav-link" activeClassName="nav-link--active">
+        ADD RESERVE
+      </NavLink>
+
       <NavLink to="/delete-house" className="nav-link" activeClassName="nav-link--active">
         DELETE HOUSE
       </NavLink>
