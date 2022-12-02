@@ -4,6 +4,7 @@ import AddHouse from './components/AddHouse';
 import HouseList from './components/HouseList';
 import ReserveList from './components/ReserveList';
 import MyReservations from './components/MyReservations';
+import ReservationForm from './components/ReservationForm';
 import Sidebar from './components/Sidebar';
 import DeleteHouse from './components/DeleteHouse';
 import './App.css';
