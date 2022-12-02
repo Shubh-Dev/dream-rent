@@ -47,3 +47,15 @@
 .mobile-nav-link.active {
   color: rgb(149, 242, 35);
 }
+
+.nav-link.logout {
+  position: absolute;
+  top: 15%;
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.mobile-nav-link.logout {
+  color: var(--green);
+  text-decoration: underline;
+}

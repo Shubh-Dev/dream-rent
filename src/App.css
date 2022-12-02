@@ -28,10 +28,6 @@
   min-height: 100vh;
 }
 
-.hamburger {
-  padding: 10px;
-}
-
 .bottom-border {
   width: 150px;
   border-bottom: 3px dotted var(--light-grey);
@@ -149,5 +145,6 @@
 
   .house-description {
     width: 90%;
+    justify-self: center;
   }
 }
