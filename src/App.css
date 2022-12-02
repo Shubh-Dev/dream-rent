@@ -69,6 +69,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .pre-next-buttons > .btn {
@@ -91,10 +92,8 @@
 @media (min-width: 768px) {
   .App {
     overflow: hidden;
-  }
-
-  .main-container {
-    margin-left: 15%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
   }
 
   .hamburger {
@@ -107,7 +106,7 @@
 
   .main-list {
     display: grid;
-    margin: 0 50px;
+    margin: 0 10%;
     grid-auto-flow: column;
     grid-gap: 10px;
     overflow-x: hidden;
@@ -126,11 +125,12 @@
     background-color: var(--green);
     position: absolute;
     bottom: 40%;
+    padding: 20px 30px;
     border-radius: 0;
   }
 
   .btn.btn-prev {
-    left: 15%;
+    left: 200px;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
   }
