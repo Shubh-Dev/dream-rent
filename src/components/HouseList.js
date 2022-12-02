@@ -1,13 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import {
-  FaFacebookF, FaTwitter, FaInstagram,
-} from 'react-icons/fa';
 import { GrCaretNext, GrCaretPrevious } from 'react-icons/gr';
 import { fetchHouses } from '../redux/house/houses';
+import House from './House';
+
+const scroll = (element, speed, distance, step) => {
+  let scrollAmount = 0;
+  const slideTimer = setInterval(() => {
+    element.scrollLeft += step;
+    scrollAmount += Math.abs(step);
+    if (scrollAmount >= distance) {
+      clearInterval(slideTimer);
+    }
+  }, speed);
+};
 
 const HouseList = () => {
+  const contentWrapper = useRef(null);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchHouses());
@@ -19,10 +29,10 @@ const HouseList = () => {
         if (houses.length > 3) {
           return (
             <div className="pre-next-buttons">
-              <button className="btn btn-prev" type="button">
+              <button className="btn btn-prev" type="button" onClick={() => scroll(contentWrapper.current, 25, 100, -1000)}>
                 <GrCaretPrevious size={25} />
               </button>
-              <button className="btn btn-next" type="button">
+              <button className="btn btn-next" type="button" onClick={() => scroll(contentWrapper.current, 25, 100, 1000)}>
                 <GrCaretNext size={25} />
               </button>
             </div>
@@ -30,34 +40,23 @@ const HouseList = () => {
         }
         return null;
       })()}
-      <div className="homepage-main-titles">
+      <div className="homepage-main-titles d-flex flex-column align-items-center">
         <h1>LATEST HOUSES</h1>
         <h2 className="dgrey-text">Please select a house model</h2>
         <div className="mt-3 d-flex justify-content-center">
           <div className="bottom-border" />
         </div>
       </div>
-      <div className="main-list d-flex pt-5">
+      <div className="main-list pt-5" ref={contentWrapper}>
         {houses.map((house) => (
-          <div className="house-container mb-3 text-center" key={house.id}>
-            <Link to={`houses/${house.id}`}>
-              <img className="homepage-house-img " style={{ width: '100%', height: '100%' }} src={house.image_path} alt="house_image" />
-            </Link>
-            <h3 className="mt-3">
-              {house.house_type.toUpperCase()}
-              {' '}
-              HOUSE
-            </h3>
-            <div className="mt-3 d-flex justify-content-center">
-              <div className="bottom-border" />
-            </div>
-            <h4 className="mt-3 dgrey-text house-description">{house.address}</h4>
-            <div className="house-icons d-flex justify-content-center gap-3 mt-5">
-              <FaFacebookF className="lgrey-text" size={30} />
-              <FaTwitter className="lgrey-text" size={30} />
-              <FaInstagram className="lgrey-text" size={30} />
-            </div>
-          </div>
+          <House
+            key={house.id}
+            index={house.id}
+            image={house.image_path}
+            type={house.house_type}
+            address={house.address}
+
+          />
         ))}
       </div>
     </div>
