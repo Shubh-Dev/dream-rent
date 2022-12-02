@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@700&display=swap');
+
 :root {
   --light-grey: #d1d3d4;
   --darker-grey: #9b9b9b;
   --white: #fff;
   --green: #97bf11;
+}
+
+.no-display {
+  display: none;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Anek Devanagari', sans-serif;
 }
 
 .sidebar-container {
@@ -15,7 +30,6 @@
 
 .hamburger {
   padding: 10px;
-  position: absolute;
 }
 
 .bottom-border {
@@ -58,11 +72,8 @@
 
 @media (min-width: 768px) {
   .App {
-    overflow: hidden;
-  }
-
-  .main-container {
-    margin-left: 20%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
   }
 
   .hamburger {

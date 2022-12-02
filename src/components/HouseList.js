@@ -11,7 +11,7 @@ const HouseList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchHouses());
-  }, []);
+  }, [dispatch]);
   const houses = useSelector((state) => state.houses);
   return (
     <div className="homepage-container text-center pt-5">

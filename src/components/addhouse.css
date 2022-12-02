@@ -1,0 +1,58 @@
+.add-house-form {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 50px 20px 20px 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.house-submit-btn {
+  padding: 5px 10px;
+  background: rgb(149, 242, 35);
+  font-weight: 100;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.house-submit-btn:hover {
+  background: rgb(149, 242, 35);
+  opacity: 0.8;
+}
+
+input[type="select"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+select:focus {
+  outline: none;
+  border-color: #333;
+}
