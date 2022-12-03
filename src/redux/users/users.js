@@ -5,7 +5,7 @@ import userAPI from '../userAPI';
 // const ADD_USER = 'ADD_USER';
 const GET_USERS = 'GET_USERS';
 
-const initialUserArray = [];
+const initialUserArray = [{ id: 0, name: 'Guest' }];
 
 const userReducer = (state = initialUserArray, action) => {
   switch (action.type) {

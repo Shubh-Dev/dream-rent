@@ -37,22 +37,15 @@ export const fetchReserves = createAsyncThunk(GET_RESERVES, async (post, { dispa
 });
 
 export const addReserves = createAsyncThunk(ADD_RESERVE, async (reserve) => {
-  await ReserveAPI.addReserve({
-    // id: reserve.id,
+  const res = await ReserveAPI.addReserve({
+    id: reserve.id,
     date: reserve.date,
     time: reserve.time,
     visitors: reserve.visitors,
     user_id: reserve.user_id,
     house_id: reserve.house_id,
   });
-  return {
-    // id: reserve.id,
-    date: reserve.date,
-    time: reserve.time,
-    visitors: reserve.visitors,
-    user_id: reserve.user_id,
-    house_id: reserve.house_id,
-  };
+  return res;
 });
 
 export default reserveReducer;

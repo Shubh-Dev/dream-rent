@@ -63,7 +63,7 @@ function Details() {
               </tbody>
             </table>
             <div className="d-grid gap-2 mt-5">
-              <button type="submit" className="btn btn-success">Reserve</button>
+              <a href={`/reservation-form/${id}`} type="submit" className="btn btn-success">Reserve</a>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ export default class ReserveAPI {
     date, time, visitors, user_id, house_id,
   }) => {
     const reserveAPIURL = 'http://[::1]:3000/api/v1/appointments/';
-    await fetch(reserveAPIURL, {
+    const res = await fetch(reserveAPIURL, {
       method: 'POST',
       body: JSON.stringify({
         // id,
@@ -25,5 +25,6 @@ export default class ReserveAPI {
         'Content-type': 'application/json; charset=UTF-8',
       },
     });
+    return res.json();
   }
 }
