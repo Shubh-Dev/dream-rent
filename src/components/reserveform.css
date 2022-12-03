@@ -36,7 +36,7 @@
 .reserve {
   display: flex;
   flex-direction: column;
-  padding: 50px 20px;
+  padding: 50px 20px 5px 20px;
   background-color: #fff;
   border: none;
   box-shadow: 1px 1px 5px 1px #000;
@@ -51,12 +51,20 @@
 }
 
 .house_info {
-  font-family: 'Rubik Mono One', sans-serif;
-  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  font-size: 1.2rem;
   color: #fff;
-  margin-bottom: 1rem;
 }
 
 .input-group {
   min-width: 100%;
+}
+
+.divider {
+    width: 60%;
+    border-bottom: 3px solid #dfdfdf;
+    margin: 20px 0;
+    color: rgb(243, 236, 236);
 }

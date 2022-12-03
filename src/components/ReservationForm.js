@@ -39,8 +39,15 @@ const ReservationForm = () => {
     return (
       <div className="reserve_container" style={{ '--reserve-form-background': `url("${house.image_path}")` }}>
         <h1 className="house_address">{house.address}</h1>
-        <h5 className="house_info">{house.address}</h5>
-        <form onSubmit={handleSubmit} className="m-5 p-5 reserve">
+        <hr className="divider" />
+        <h5 className="house_info">
+          Hello,
+          {' '}
+          {user.name}
+          {' '}
+        </h5>
+        <h5 className="house_info">Please fill in the form below to reserve this house. </h5>
+        <form onSubmit={handleSubmit} className="p-5 reserve">
           <div className="row-sm-3 pb-3">
             <div className="col-sm-12">
               <div className="date input-group" id="datepicker">
