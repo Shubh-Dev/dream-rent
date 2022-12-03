@@ -27,16 +27,16 @@ const Hamburger = () => {
     cursor: 'pointer',
     width: '50px',
     height: '50px',
-    padding: '10px'
+    padding: '10px',
   };
 
   const hamburgerStyle = {
     position: 'fixed',
     cursor: 'pointer',
+    fontSize: '1.5rem',
     width: '50px',
     height: '50px',
-    padding: '10px'
-
+    padding: '10px',
   };
 
   const [isOpen, setIsOpen] = useState(false);

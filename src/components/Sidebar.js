@@ -28,6 +28,10 @@ const Sidebar = () => {
           MY RESERVATIONS
         </NavLink>
 
+        <NavLink to="/reserves" className={width ? 'mobile-nav-link' : 'nav-link'}>
+          ADD RESERVATION
+        </NavLink>
+
         <NavLink to="/delete-house" className={width ? 'mobile-nav-link' : 'nav-link'}>
           DELETE HOUSE
         </NavLink>
