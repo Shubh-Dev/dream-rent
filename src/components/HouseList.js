@@ -7,7 +7,7 @@ import House from './House';
 const scroll = (element, speed, distance, step) => {
   let scrollAmount = 0;
   const slideTimer = setInterval(() => {
-    element.scrollLeft += step;
+    element.scrollLeft += step; // eslint-disable-line no-param-reassign
     scrollAmount += Math.abs(step);
     if (scrollAmount >= distance) {
       clearInterval(slideTimer);

@@ -24,13 +24,13 @@ const Hamburger = () => {
     zIndex: '2',
     color: 'white',
     fontSize: '22px',
-    cursor: 'pointer'
+    cursor: 'pointer',
   };
 
   const hamburgerStyle = {
     position: 'fixed',
     cursor: 'pointer',
-    fontSize: '1.5rem'
+    fontSize: '1.5rem',
   };
 
   const [isOpen, setIsOpen] = useState(false);
