@@ -15,7 +15,7 @@ import { isLogged } from './api/config';
 import Logout from './components/Logout';
 import Hamburger from './components/Hamburger';
 
-function App() {
+const App = () => {
   const location = useLocation();
   useEffect(() => {
     if (!isLogged && window.location.pathname !== '/login') {
@@ -47,6 +47,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
