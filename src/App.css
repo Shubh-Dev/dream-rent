@@ -87,6 +87,11 @@
   padding-top: 50px;
 }
 
+pre {
+  font-weight: bold;
+  font-family: var(--bs-body-font-family) !important;
+}
+
 /* Desktop Version */
 
 @media (min-width: 768px) {
