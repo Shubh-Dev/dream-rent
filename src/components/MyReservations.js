@@ -27,7 +27,7 @@ const MyReservations = () => {
 
           if (house) {
             return (
-              <div key={reserve.id} className="row col-md-8 col-lg-10">
+              <div key={reserve.id} className="row">
                 <div className="col-sm-12 col-md-12 col-lg-12">
                   <div className="reserve-card reserve-card--vertical">
                     <div className="reserve-card_img">
