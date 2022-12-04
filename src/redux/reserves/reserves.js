@@ -41,18 +41,11 @@ export const addReserves = createAsyncThunk(ADD_RESERVE, async (reserve) => {
     id: reserve.id,
     date: reserve.date,
     time: reserve.time,
+    visitors: reserve.visitors,
     user_id: reserve.user_id,
     house_id: reserve.house_id,
-    visitors: reserve.visitors,
   });
   return res;
-  // return {
-  //   id: reserve.id,
-  //   date: reserve.date,
-  //   time: reserve.time,
-  //   user_id: reserve.user_id,
-  //   house_id: reserve.house_id,
-  // };
 });
 
 export default reserveReducer;

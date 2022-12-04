@@ -8,18 +8,18 @@ export default class ReserveAPI {
   };
 
   static addReserve = async ({
-    id, date, time, user_id, house_id, visitors,
+    date, time, visitors, user_id, house_id,
   }) => {
     const reserveAPIURL = 'http://[::1]:3000/api/v1/appointments/';
     const res = await fetch(reserveAPIURL, {
       method: 'POST',
       body: JSON.stringify({
-        id,
+        // id,
         date,
         time,
+        visitors,
         user_id,
         house_id,
-        visitors,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

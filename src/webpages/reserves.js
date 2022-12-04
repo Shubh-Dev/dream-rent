@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import { fetchHouses } from '../redux/house/houses';
 import { fetchUsers } from '../redux/users/users';
 import { addReserves } from '../redux/reserves/reserves';
@@ -11,18 +10,27 @@ const Reserve = () => {
     dispatch(fetchHouses());
     dispatch(fetchUsers());
   }, []);
+
   const houses = useSelector((state) => state.houses);
   const users = useSelector((state) => state.users);
-
+  const [message, setMessage] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addReserves({
-      id: uuidv4(),
       date: e.target.date.value,
       time: e.target.time.value,
+      visitors: e.target.visitors.value,
       user_id: e.target.user_id.value,
       house_id: e.target.house_id.value,
     }));
+    setMessage(
+      `Reservation saved 
+Date: ${e.target.date.value} 
+Time: ${e.target.time.value} 
+No. of visitors: ${e.target.visitors.value} 
+House Address: ${e.target.house_id.options[e.target.house_id.selectedIndex].text} 
+Visitor Name: ${e.target.user_id.options[e.target.user_id.selectedIndex].text}`,
+    );
     e.target.reset();
   };
   return (
@@ -38,6 +46,13 @@ const Reserve = () => {
         <div className="input-group">
           <div className="input-group date">
             <input type="time" className="form-control" id="time" />
+          </div>
+        </div>
+      </div>
+      <div className="row-sm-3 pb-3">
+        <div className="input-group">
+          <div className="input-group date">
+            <input type="text" className="form-control" id="visitors" placeholder="Number of Visitors" />
           </div>
         </div>
       </div>
@@ -64,6 +79,10 @@ const Reserve = () => {
       <div className="row-auto">
         <button type="submit" className="btn btn-success">Reserve</button>
       </div>
+      <br />
+      <pre>
+        {message}
+      </pre>
     </form>
   );
 };
