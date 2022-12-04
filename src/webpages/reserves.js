@@ -9,7 +9,7 @@ const Reserve = () => {
   useEffect(() => {
     dispatch(fetchHouses());
     dispatch(fetchUsers());
-  }, []);
+  }, [dispatch]);
 
   const houses = useSelector((state) => state.houses);
   const users = useSelector((state) => state.users);
@@ -38,21 +38,21 @@ Visitor Name: ${e.target.user_id.options[e.target.user_id.selectedIndex].text}`,
       <div className="row-sm-3 pb-3">
         <div className="input-group">
           <div className="input-group date">
-            <input type="date" className="form-control" id="date" />
+            <input type="date" className="form-control" id="date" required />
           </div>
         </div>
       </div>
       <div className="row-sm-3 pb-3">
         <div className="input-group">
           <div className="input-group date">
-            <input type="time" className="form-control" id="time" />
+            <input type="time" className="form-control" id="time" required />
           </div>
         </div>
       </div>
       <div className="row-sm-3 pb-3">
         <div className="input-group">
           <div className="input-group date">
-            <input type="text" className="form-control" id="visitors" placeholder="Number of Visitors" />
+            <input type="text" className="form-control" id="visitors" placeholder="Number of Visitors" required />
           </div>
         </div>
       </div>
