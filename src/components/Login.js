@@ -41,16 +41,20 @@ const Login = () => {
 
   return (
     <div className="login_container">
-      <h1 className="login_title">App title</h1>
-      <form className="sign-up" onSubmit={handleLoginSubmit} action="/login" method="POST">
-        <label htmlFor="username">
-          <input className="input" onChange={(e) => setUserName(e.target.value)} type="username" name="username" id="username" placeholder="Username:" />
-        </label>
-        <input className="login" type="submit" value="Login" />
+      <div className="form-container d-flex flex-column align-items-center">
+        <form className="sign-up d-flex flex-column align-items-center" onSubmit={handleLoginSubmit} action="/login" method="POST">
+          <div className="login-logo">
+            <img src="/logo.png" alt="logo" width="80" height="80" />
+          </div>
+          <label htmlFor="username">
+            <input className="input" onChange={(e) => setUserName(e.target.value)} type="username" name="username" id="username" placeholder="Username:" />
+          </label>
+          <input className="login" type="submit" value="Login" />
+        </form>
         <p>Don&apos;t have account?</p>
         <a onClick={handleRegisterSubmit} href="/signup" alt="create new account">Sign up</a>
         <p id="message">{notice}</p>
-      </form>
+      </div>
     </div>
   );
 };

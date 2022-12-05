@@ -1,0 +1,70 @@
+.reserve_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--reserve-form-background);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.reserve_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(149, 190, 14, 0.8);
+  z-index: -1;
+}
+
+.reserve_title {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.date {
+  width: 100%;
+}
+
+.reserve {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px 5px 20px;
+  background-color: #fff;
+  border: none;
+  box-shadow: 1px 1px 5px 1px #000;
+  gap: 10px;
+}
+
+.house_address {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.house_info {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.input-group {
+  min-width: 100%;
+}
+
+.divider {
+  width: 60%;
+  border-bottom: 3px solid #dfdfdf;
+  margin: 20px 0;
+  color: rgb(243, 236, 236);
+}

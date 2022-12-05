@@ -27,9 +27,17 @@ const Sidebar = () => {
         <NavLink to="/my-reservations" className={width ? 'mobile-nav-link' : 'nav-link'} activeClassName="active-link">
           MY RESERVATIONS
         </NavLink>
-
+        
+        <NavLink to="/reserves" className={width ? 'mobile-nav-link' : 'nav-link'} activeClassName="active-link">
+          ADD RESERVATION
+        </NavLink>
+        
         <NavLink to="/delete-house" className={width ? 'mobile-nav-link' : 'nav-link'} activeClassName="active-link">
           DELETE HOUSE
+        </NavLink>
+
+        <NavLink to="/logout" className={width ? 'mobile-nav-link logout' : 'nav-link logout'} activeClassName="active-link">
+          Log out
         </NavLink>
 
         <div className={width ? 'no-display' : 'social-logos'}>

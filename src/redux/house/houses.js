@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import HouseAPI from '../houseAPI';
 
-// Setting Actions and Reducers for the Books
+// Setting Actions and Reducers for the Users
 const ADD_HOUSE = 'ADD_HOUSE';
 const REMOVE_HOUSE = 'REMOVE_HOUSE';
 const GET_HOUSE = 'GET_HOUSE';
