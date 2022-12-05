@@ -20,7 +20,7 @@ const Sidebar = () => {
           ADD HOUSE
         </NavLink>
 
-        <NavLink to="/reserve-list" className={width ? 'mobile-nav-link' : 'nav-link'}>
+        <NavLink to="/reservelist" className={width ? 'mobile-nav-link' : 'nav-link'}>
           RESERVE LIST
         </NavLink>
 
