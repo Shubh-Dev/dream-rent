@@ -21,8 +21,13 @@
   font-family: 'Anek Devanagari', sans-serif;
 }
 
+
 .sidebar-container {
   display: none;
+}
+
+.hamburger {
+  padding: 2px;
 }
 
 .App {
@@ -66,7 +71,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .pre-next-buttons > .btn {
