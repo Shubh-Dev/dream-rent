@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import './addhouse.css';
 
 const AddHouse = () => {
-  const URL = 'https://dream-rent-api.onrender.com/houses';
+  const URL = 'http://[::1]:3000/api/v1/houses/';
   const [house, setHouse] = useState({
     address: '',
     house_type: '',
