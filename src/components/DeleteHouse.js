@@ -7,7 +7,7 @@ const DeleteHouse = () => {
   const [houses, setHouses] = useState([]);
 
   useEffect(() => {
-    axios.get('http://[::1]:3000/api/v1/houses')
+    axios.get('https://dream-rent-api.onrender.com/houses')
       .then((res) => {
         setIsLoaded(true);
         setHouses(res.data);

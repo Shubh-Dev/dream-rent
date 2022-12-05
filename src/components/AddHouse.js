@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import './addhouse.css';
 
 const AddHouse = () => {
-  const URL = 'http://localhost:3000/api/v1/houses';
+  const URL = 'https://dream-rent-api.onrender.com/houses';
   const [house, setHouse] = useState({
     address: '',
     house_type: '',
@@ -85,8 +85,8 @@ const AddHouse = () => {
         </div>
         <div className="form-group custom-select">
           <select name="balcony" value={house.balcony} onChange={handleChange}>
-            <option value="true">true</option>
-            <option value="false">false</option>
+            <option value="true">Balcony: Yes</option>
+            <option value="false">No</option>
           </select>
         </div>
         <div className="form-group">

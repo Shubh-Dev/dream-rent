@@ -12,23 +12,23 @@ const Sidebar = () => {
         <img src="logo.png" alt="logo" width="80" height="80" />
       </div>
       <div className="nav-links-container">
-        <NavLink to="/" className={width ? 'mobile-nav-link' : 'nav-link'} exact>
+        <NavLink to="/" className={width ? 'mobile-nav-link' : 'nav-link'} activeClassName="active-link" exact>
           HOUSE LIST
         </NavLink>
 
-        <NavLink to="/add-house" className={width ? 'mobile-nav-link' : 'nav-link'}>
+        <NavLink to="/add-house" className={width ? 'mobile-nav-link' : 'nav-link'} activeClassName="active-link">
           ADD HOUSE
         </NavLink>
 
-        <NavLink to="/reserve-list" className={width ? 'mobile-nav-link' : 'nav-link'}>
+        <NavLink to="/reserve-list" className={width ? 'mobile-nav-link' : 'nav-link'} activeClassName="active-link">
           RESERVE LIST
         </NavLink>
 
-        <NavLink to="/my-reservations" className={width ? 'mobile-nav-link' : 'nav-link'}>
+        <NavLink to="/my-reservations" className={width ? 'mobile-nav-link' : 'nav-link'} activeClassName="active-link">
           MY RESERVATIONS
         </NavLink>
 
-        <NavLink to="/delete-house" className={width ? 'mobile-nav-link' : 'nav-link'}>
+        <NavLink to="/delete-house" className={width ? 'mobile-nav-link' : 'nav-link'} activeClassName="active-link">
           DELETE HOUSE
         </NavLink>
 
