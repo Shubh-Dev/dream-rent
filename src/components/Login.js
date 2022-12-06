@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    axios.post('/users/login', { user: { name: username } })
+    axios.post('users/login', { user: { name: username } })
       .then((response) => {
         if (response.status === 200) {
           login(username);

@@ -45,8 +45,11 @@ const AddHouse = () => {
     fetch(URL, {
       method: 'POST',
       body: formData,
+    }).then((response) => {
+      if (response.ok) {
+        redirectAfterSubmit();
+      }
     });
-    if (house.address) redirectAfterSubmit();
   };
 
   return (
@@ -85,8 +88,8 @@ const AddHouse = () => {
         </div>
         <div className="form-group custom-select">
           <select name="balcony" value={house.balcony} onChange={handleChange}>
-            <option value="true">true</option>
-            <option value="false">false</option>
+            <option value="true">Have Balcony</option>
+            <option value="false">No Balcony</option>
           </select>
         </div>
         <div className="form-group">
