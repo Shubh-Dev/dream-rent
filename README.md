@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+<img src="murple_logo.png" alt="logo" width="140"  height="auto" />
 
-## Available Scripts
 
-In the project directory, you can run:
+# Dream Rent:
 
-### `npm start`
+ Dream rent an appointment booking application, allows Tenants to book an appointment to visit their dream home . This application is built using React, Redux and the backend is built using Ruby on Rails. You can find the backend repository [here](https://github.com/Shubh-Dev/dream-rent-api.git)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
+<hr>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Built With
 
-### `npm test`
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href= "https://redux.js.org/">Redux</a></li>
+  </ul>
+</details>
 
-### `npm run build`
+<details>
+<summary>Client</summary>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a></li>
+  </ul>
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.npmjs.com/package/axios">Axios</a></li>
+  </ul>
+</details>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+  </ul>
+</details>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+  </ul>
+</details>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Visit the live output at: 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+http://localhost:3000/api/v1/houses
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Learn More
+## Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- node
+- npm
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Setup and Usage
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Start Front-end React server**
+- Clone the project `https://github.com/Shubh-Dev/dream-rent.git`
+- navigate to the folder `cd dream-rent`
+- run `npm i `to install all dependencies
+- Start server `npm start` and choose the yes option to start server in different port (not 3000)
+- Enjoy interacting with the app.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Authors
 
-### Making a Progressive Web App
+👤 **Tuğsem Saranlı**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- GitHub: [@githubhandle](https://github.com/tugsem/)
+- Twitter: [@twitterhandle](https://twitter.com/tugsemSaranli)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tugsem/)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+👤 **Asim Mehmood Khan**
 
-### Deployment
+- GitHub: [@githubhandle](https://github.com/AsimKhan2019/)
+- Twitter: [@twitterhandle](https://twitter.com/vtechbiz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/asim-khan/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+👤 <a href="https://github.com/Shubh-Dev" target="blank"><img align="center"
+      src="https://avatars.githubusercontent.com/u/46110284?v=4"
+      alt="Shubh-Dev" height="50" width="50"/></a> **Shubh-Dev**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- GitHub: [@Shubh-dev](https://github.com/Shubh-Dev)
+- LinkedIn: [Shubh Dev](https://www.linkedin.com/in/shubhscb/)
+
+
+👤 **Hamma Azarok**
+
+- GitHub: [@hammaagazarok](https://github.com/hammaazarok/)
+- Twitter: [Twitter](https://twitter.com/hamma10)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hammaagazarok/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgement
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./LICENSE.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
