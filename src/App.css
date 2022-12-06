@@ -21,6 +21,10 @@
   font-family: 'Anek Devanagari', sans-serif;
 }
 
+.hamburger {
+  padding: 2px;
+}
+
 .sidebar-container {
   display: none;
 }
