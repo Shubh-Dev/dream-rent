@@ -102,6 +102,7 @@ To get a local copy up and running follow these simple example steps.
       alt="Shubh-Dev" height="50" width="50"/></a> **Shubh-Dev**
 
 - GitHub: [@Shubh-dev](https://github.com/Shubh-Dev)
+- Twitter: [@Shubh-dev](https://twitter.com/Shubh_M_das)
 - LinkedIn: [Shubh Dev](https://www.linkedin.com/in/shubhscb/)
 
 
