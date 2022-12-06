@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'http://localhost:3000/api/v1/',
+  baseURL: 'https://dream-rent-api-production.up.railway.app/api/v1/',
   headers: {
     'Content-type': 'application/json',
   },

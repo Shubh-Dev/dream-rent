@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 export default class ReserveAPI {
   static fetchReserves = async () => {
-    const reserveAPIURL = 'http://[::1]:3000/api/v1/appointments/';
+    const reserveAPIURL = 'https://dream-rent-api-production.up.railway.app/api/v1/appointments/';
     const response = await fetch(reserveAPIURL);
     const data = await response.json();
     return data;
@@ -10,7 +10,7 @@ export default class ReserveAPI {
   static addReserve = async ({
     date, time, visitors, user_id, house_id,
   }) => {
-    const reserveAPIURL = 'http://[::1]:3000/api/v1/appointments/';
+    const reserveAPIURL = 'https://dream-rent-api-production.up.railway.app/api/v1/appointments/';
     const res = await fetch(reserveAPIURL, {
       method: 'POST',
       body: JSON.stringify({

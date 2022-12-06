@@ -7,7 +7,7 @@ const DeleteHouse = () => {
   const [houses, setHouses] = useState([]);
 
   useEffect(() => {
-    axios.get('http://[::1]:3000/api/v1/houses')
+    axios.get('https://dream-rent-api-production.up.railway.app/api/v1/houses')
       .then((res) => {
         setIsLoaded(true);
         setHouses(res.data);
@@ -48,7 +48,7 @@ const DeleteHouse = () => {
                 {house.size}
               </small>
             </p>
-            <button type="button" className="delete-btn" onClick={() => { axios.delete(`http://[::1]:3000/api/v1/houses/${house.id}`); reRenderPage(house.id); }}>Delete</button>
+            <button type="button" className="delete-btn" onClick={() => { axios.delete(`https://dream-rent-api-production.up.railway.app/api/v1/houses/${house.id}`); reRenderPage(house.id); }}>Delete</button>
 
           </div>
 

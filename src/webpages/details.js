@@ -8,7 +8,7 @@ function Details() {
   const [detail, setDetail] = useState([]);
 
   useEffect(() => {
-    fetch(`http://[::1]:3000/api/v1/houses/${id}`)
+    fetch(`https://dream-rent-api-production.up.railway.app/api/v1/houses/${id}`)
       .then((res) => res.json())
       .then(
         (data) => {
