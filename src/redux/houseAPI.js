@@ -1,13 +1,15 @@
+import { API_URL } from '../api/config';
+
 export default class houseAPI {
   static fetchHouses = async () => {
-    const houseAPIURL = 'https://dream-rent-api-production.up.railway.app/api/v1/houses';
+    const houseAPIURL = `${API_URL}houses`;
     const response = await fetch(houseAPIURL);
     const data = await response.json();
     return data;
   };
 
   static deleteHouse = async (id) => {
-    const houseAPIURL = 'https://dream-rent-api-production.up.railway.app/api/v1/houses';
+    const houseAPIURL = `${API_URL}houses`;
     await fetch(houseAPIURL + id, {
       method: 'DELETE',
       headers: {
@@ -19,7 +21,7 @@ export default class houseAPI {
   static addHouse = async ({
     address, size, rooms, balcony, image,
   }) => {
-    const houseAPIURL = 'https://dream-rent-api-production.up.railway.app/api/v1/houses';
+    const houseAPIURL = `${API_URL}houses`;
     await fetch(houseAPIURL, {
       method: 'POST',
       body: JSON.stringify({

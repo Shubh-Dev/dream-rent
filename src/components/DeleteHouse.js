@@ -1,13 +1,14 @@
 import { React, useState, useEffect } from 'react';
 import axios from 'axios';
 import './deletehouse.css';
+import { API_URL } from '../api/config';
 
 const DeleteHouse = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [houses, setHouses] = useState([]);
 
   useEffect(() => {
-    axios.get('https://dream-rent-api-production.up.railway.app/api/v1/houses')
+    axios.get(`${API_URL}houses`)
       .then((res) => {
         setIsLoaded(true);
         setHouses(res.data);
@@ -48,7 +49,7 @@ const DeleteHouse = () => {
                 {house.size}
               </small>
             </p>
-            <button type="button" className="delete-btn" onClick={() => { axios.delete(`https://dream-rent-api-production.up.railway.app/api/v1/houses/${house.id}`); reRenderPage(house.id); }}>Delete</button>
+            <button type="button" className="delete-btn" onClick={() => { axios.delete(`${API_URL}houses/${house.id}`); reRenderPage(house.id); }}>Delete</button>
 
           </div>
 
