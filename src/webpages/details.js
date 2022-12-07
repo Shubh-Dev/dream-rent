@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { API_URL } from '../api/config';
 
 function Details() {
   const { id } = useParams();
@@ -8,7 +9,7 @@ function Details() {
   const [detail, setDetail] = useState([]);
 
   useEffect(() => {
-    fetch(`https://dream-rent-api-production.up.railway.app/api/v1/houses/${id}`)
+    fetch(`${API_URL}houses/${id}`)
       .then((res) => res.json())
       .then(
         (data) => {
