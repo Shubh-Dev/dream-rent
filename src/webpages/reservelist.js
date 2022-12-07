@@ -10,7 +10,7 @@ const ReserveList = () => {
     dispatch(fetchReserves());
     dispatch(fetchHouses());
     dispatch(fetchUsers());
-  }, [dispatch]);
+  }, []);
   const reserves = useSelector((state) => state.reserves);
   const houses = useSelector((state) => state.houses);
   const users = useSelector((state) => state.users);
