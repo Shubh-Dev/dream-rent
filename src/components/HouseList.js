@@ -24,7 +24,7 @@ const HouseList = () => {
   }, [dispatch]);
   const houses = useSelector((state) => state.houses);
   return (
-    <div className="homepage-container text-center pt-5">
+    <div className="homepage-container">
       {(() => {
         if (houses.length > 3) {
           return (
@@ -40,14 +40,14 @@ const HouseList = () => {
         }
         return null;
       })()}
-      <div className="homepage-main-titles d-flex flex-column align-items-center">
+      <div className="homepage-main-titles d-flex flex-column text-center">
         <h1>LATEST HOUSES</h1>
         <h2 className="dgrey-text">Please select a house model</h2>
         <div className="mt-3 d-flex justify-content-center">
           <div className="bottom-border" />
         </div>
       </div>
-      <div className="main-list pt-5" ref={contentWrapper}>
+      <div className="main-list" ref={contentWrapper}>
         {houses.map((house) => (
           <House
             key={house.id}

@@ -50,8 +50,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 5%;
-  min-height: 80vh;
+  max-height: 80vh;
+  padding: 30px;
 }
 
 .house-icons * {
@@ -62,15 +62,18 @@
 
 .homepage-house-img {
   border-radius: 20%;
-  max-width: 400px;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.img-wrapper {
+  width: 300px;
+  height: 200px;
 }
 
 .main-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  overflow-x: hidden;
 }
 
 .pre-next-buttons > .btn {
@@ -97,9 +100,12 @@ pre {
 
 @media (min-width: 768px) {
   .App {
-    overflow: hidden;
     display: grid;
     grid-template-columns: 200px 1fr;
+  }
+
+  .main-container {
+    width: calc(100vw - 200px);
   }
 
   .hamburger {
@@ -112,8 +118,8 @@ pre {
 
   .main-list {
     display: grid;
-    margin: 0 10%;
     grid-auto-flow: column;
+    margin: 0 87px;
     grid-gap: 10px;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -122,8 +128,7 @@ pre {
   .house-container {
     display: grid;
     width: 100%;
-    padding: 30px;
-    min-height: 60vh;
+    height: calc(100vh - 234px);
   }
 
   .pre-next-buttons > .btn {
@@ -148,13 +153,12 @@ pre {
     border-bottom-left-radius: 50%;
   }
 
-  .homepage-house-img {
-    max-width: 250px;
-    margin: auto;
-  }
-
   .house-description {
     width: 90%;
     justify-self: center;
+  }
+
+  .homepage-main-titles {
+    width: calc(100vw - 200px);
   }
 }
