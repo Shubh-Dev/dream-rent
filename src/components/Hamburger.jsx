@@ -37,7 +37,6 @@ const Hamburger = () => {
     width: '50px',
     height: '50px',
     padding: '10px',
-    zIndex: '2',
   };
 
   const [isOpen, setIsOpen] = useState(false);

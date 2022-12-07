@@ -8,6 +8,7 @@
   align-items: center;
   position: absolute;
   left: 0;
+  top: 0;
   height: 100vh;
   background-image: url("../../public/loginbgimg.jpg");
   background-size: cover;
