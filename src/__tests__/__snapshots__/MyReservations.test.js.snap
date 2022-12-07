@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyReservations renders correctly 1`] = `
+<div
+  className="my-reservations-container"
+>
+  <h1
+    className="text-center text-uppercase"
+  >
+    My Reservations
+  </h1>
+  <br />
+  <div
+    className="col-lg-12"
+  >
+    <h3
+      className="text-center"
+    >
+      No reservations yet
+    </h3>
+  </div>
+</div>
+`;

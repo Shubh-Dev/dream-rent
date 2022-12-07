@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HouseList renders correctly 1`] = `
+<div
+  className="homepage-container text-center pt-5"
+>
+  <div
+    className="homepage-main-titles d-flex flex-column align-items-center"
+  >
+    <h1>
+      LATEST HOUSES
+    </h1>
+    <h2
+      className="dgrey-text"
+    >
+      Please select a house model
+    </h2>
+    <div
+      className="mt-3 d-flex justify-content-center"
+    >
+      <div
+        className="bottom-border"
+      />
+    </div>
+  </div>
+  <div
+    className="main-list pt-5"
+  />
+</div>
+`;
