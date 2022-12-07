@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReserveList renders correctly 1`] = `
+<div
+  className="reserve-list-container"
+>
+  <h1>
+    Reserve List goes here
+  </h1>
+</div>
+`;
