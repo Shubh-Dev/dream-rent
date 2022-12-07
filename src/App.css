@@ -1,38 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@700&display=swap');
+
+:root {
+  --light-grey: #d1d3d4;
+  --darker-grey: #9b9b9b;
+  --white: #fff;
+  --green: #97bf11;
+  --reserve-form-background: url("https://raw.githubusercontent.com/Shubh-Dev/dream-rent/27e26f8dba321e38a0da6f9bb261146edc87ba09/public/loginbgimg.jpg");
+}
+
+.no-display {
+  display: none;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Anek Devanagari', sans-serif;
+}
+
+.hamburger {
+  padding: 2px;
+}
+
+.sidebar-container {
+  display: none;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+}
+
+.bottom-border {
+  width: 150px;
+  border-bottom: 3px dotted var(--light-grey);
+}
+
+.lgrey-text {
+  color: var(--light-grey);
+}
+
+.dgrey-text {
+  color: var(--darker-grey);
+}
+
+.house-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-height: 80vh;
+  padding: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.house-icons * {
+  border: 3px solid var(--light-grey);
+  border-radius: 50%;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.homepage-house-img {
+  border-radius: 20%;
+  width: 100%;
+  height: 100%;
+}
+
+.img-wrapper {
+  width: 300px;
+  height: 200px;
+}
+
+.main-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.pre-next-buttons > .btn {
+  display: none;
+}
+
+.house-description {
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px;
+}
+
+.homepage-main-titles {
+  padding-top: 50px;
+}
+
+pre {
+  font-weight: bold;
+  font-family: var(--bs-body-font-family) !important;
+}
+
+/* Desktop Version */
+
+@media (min-width: 768px) {
+  .App {
+    display: grid;
+    grid-template-columns: 200px 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-container {
+    width: calc(100vw - 200px);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .sidebar-container {
+    display: block;
+  }
+
+  .main-list {
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0 87px;
+    grid-gap: 10px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .house-container {
+    display: grid;
+    width: 100%;
+    height: calc(100vh - 234px);
+  }
+
+  .pre-next-buttons > .btn {
+    display: block;
+    background-color: var(--green);
+    position: absolute;
+    bottom: 40%;
+    padding: 20px 30px;
+    border-radius: 0;
+  }
+
+  .btn.btn-prev {
+    left: 200px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  .btn.btn-next {
+    color: var(--white);
+    right: 0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+
+  .house-description {
+    width: 90%;
+    justify-self: center;
+  }
+
+  .homepage-main-titles {
+    width: calc(100vw - 200px);
   }
 }
