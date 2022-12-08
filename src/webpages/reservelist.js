@@ -5,15 +5,15 @@ import { fetchHouses } from '../redux/house/houses';
 import { fetchUsers } from '../redux/users/users';
 
 const ReserveList = () => {
+  const reserves = useSelector((state) => state.reserves);
+  const houses = useSelector((state) => state.houses);
+  const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchReserves());
     dispatch(fetchHouses());
     dispatch(fetchUsers());
   }, [dispatch]);
-  const reserves = useSelector((state) => state.reserves);
-  const houses = useSelector((state) => state.houses);
-  const users = useSelector((state) => state.users);
 
   if (users !== undefined || houses !== undefined || reserves !== undefined) {
     return (
@@ -58,7 +58,11 @@ const ReserveList = () => {
     );
   }
   return (
-    ReserveList()
+    <div className="container">
+      <div className="row d-flex p-5">
+        <h1>Loading...</h1>
+      </div>
+    </div>
   );
 };
 
