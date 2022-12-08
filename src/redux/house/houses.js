@@ -39,12 +39,9 @@ export const getAllHouses = (payload) => (
 );
 
 export const fetchHouses = createAsyncThunk(GET_HOUSES, async (get, { dispatch }) => {
-  try {
-    const response = await HouseAPI.fetchHouses();
-    dispatch(getAllHouses(response));
-  } catch (err) {
-    dispatch({ type: 'GET_HOUSES_REJECTED', payload: err });
-  }
+  const houses = await HouseAPI.getHouses();
+  dispatch(getAllHouses(houses));
+  return houses;
 });
 
 export const deleteHouse = createAsyncThunk(REMOVE_HOUSE, async (id) => {
