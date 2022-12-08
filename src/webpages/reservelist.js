@@ -58,7 +58,7 @@ const ReserveList = () => {
     );
   }
   return (
-    dispatch(fetchReserves())
+    ReserveList()
   );
 };
 
