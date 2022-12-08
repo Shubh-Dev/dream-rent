@@ -62,6 +62,8 @@
 
 [Back End URL](https://dream-rent-api-production.up.railway.app/)
 
+[API Documentation](https://dream-rent-api-production.up.railway.app/api-docs/index.html)
+
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
