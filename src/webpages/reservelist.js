@@ -15,7 +15,7 @@ const ReserveList = () => {
     dispatch(fetchUsers());
   }, [dispatch]);
 
-  if (users !== undefined && houses !== undefined && reserves !== undefined) {
+  if (users.length !== 0 && houses.length !== 0 && reserves.length !== 0) {
     return (
       <div className="container">
         <div className="row d-flex p-5">
