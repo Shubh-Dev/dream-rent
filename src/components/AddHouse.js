@@ -14,6 +14,7 @@ const AddHouse = () => {
   });
 
   const handleChange = (e) => {
+    console.log(e)
     setHouse({ ...house, [e.target.name]: e.target.value });
   };
 
